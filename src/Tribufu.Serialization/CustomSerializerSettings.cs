@@ -7,16 +7,13 @@ using Newtonsoft.Json.Serialization;
 
 namespace Tribufu.Serialization
 {
-    public static class SerializationConfiguration
+    public static class CustomSerializerSettings
     {
-        public static JsonSerializerSettings GetNewtonsoftJsonSerializerSettings()
+        public static void SetNewtonsoftJson(ref JsonSerializerSettings settings)
         {
-            var settings = new JsonSerializerSettings
+            settings.ContractResolver = new BaseClassFirstContractResolver
             {
-                ContractResolver = new BaseClassFirstContractResolver
-                {
-                    NamingStrategy = new SnakeCaseNamingStrategy()
-                },
+                NamingStrategy = new SnakeCaseNamingStrategy()
             };
 
             settings.Converters.Add(new DecimalNullableStringConverter());
@@ -26,8 +23,6 @@ namespace Tribufu.Serialization
             settings.Converters.Add(new StringEnumConverter(new SnakeCaseNamingStrategy(), false));
 
             settings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-
-            return settings;
         }
     }
 }
