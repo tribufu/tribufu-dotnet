@@ -2,6 +2,8 @@
 // SPDX-License-Identifier: MIT
 
 using dotenv.net;
+using System;
+using System.Threading.Tasks;
 using Tribufu.Generated.Client;
 using Tribufu.Logging;
 
