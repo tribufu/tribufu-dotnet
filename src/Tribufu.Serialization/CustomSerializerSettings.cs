@@ -9,6 +9,13 @@ namespace Tribufu.Serialization
 {
     public static class CustomSerializerSettings
     {
+        public static JsonSerializerSettings GetNewtonsoftJson()
+        {
+            var settings = new JsonSerializerSettings();
+            SetNewtonsoftJson(settings);
+            return settings;
+        }
+
         public static void SetNewtonsoftJson(JsonSerializerSettings settings)
         {
             settings.ContractResolver = new BaseClassFirstContractResolver
