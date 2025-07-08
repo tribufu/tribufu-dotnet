@@ -14,7 +14,7 @@ namespace Tribufu.Serialization
         protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
         {
             var props = base.CreateProperties(type, memberSerialization);
-            return props.OrderBy(p => !string.Equals(p.PropertyName, "id", StringComparison.OrdinalIgnoreCase)).ThenBy(p => p.DeclaringType != type).ToList();
+            return props.OrderBy(p => { return p.DeclaringType == type ? 1 : 0; }).ToList();
         }
     }
 }
