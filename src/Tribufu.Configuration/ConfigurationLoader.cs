@@ -11,8 +11,6 @@ namespace Tribufu.Configuration
 {
     public static class ConfigurationLoader
     {
-        public static IConfiguration Configuration { get; private set; }
-
         public static IConfiguration Load(string[] fileNames)
         {
             var configDirectory = Paths.GetApplicationConfigDirectory();
@@ -28,8 +26,8 @@ namespace Tribufu.Configuration
                     continue;
                 }
 
-                var ext = Path.GetExtension(fullPath).ToLowerInvariant();
-                switch (ext)
+                var extension = Path.GetExtension(fullPath).ToLowerInvariant();
+                switch (extension)
                 {
                     case ".ini":
                         configurationBuilder.AddIniFile(fullPath, true, false);
@@ -41,13 +39,12 @@ namespace Tribufu.Configuration
                         configurationBuilder.AddTomlFile(fullPath, true, false);
                         break;
                     default:
-                        Logger.Warn($"Unsupported config file extension: {ext}");
+                        Logger.Warn($"Unsupported config file extension: {extension}");
                         break;
                 }
             }
 
-            Configuration = configurationBuilder.Build();
-            return Configuration;
+            return configurationBuilder.Build();
         }
     }
 }
