@@ -21,7 +21,7 @@ namespace Tribufu.Database.Repositories
             _dbSet = context.Set<T>();
         }
 
-        public virtual void SeedDefaults()
+        public virtual async Task SeedAsync()
         {
         }
 

@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace Tribufu.Database.Repositories
 {
-    public interface IRepository
+    public interface IRepository<T, K> where T : class
     {
-        void SeedDefaults();
-    }
+        Task SeedAsync();
 
-    public interface IRepository<T, K> : IRepository where T : class
-    {
         IList<T> GetAll();
 
         Task<IList<T>> GetAllAsync();
