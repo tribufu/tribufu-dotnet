@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Tribufu.Database.Repositories
 {
-    public interface IRepository<T, K> where T : class
+    public interface IRepository
+    {
+        void SeedDefaults();
+    }
+
+    public interface IRepository<T, K> : IRepository where T : class
     {
         IList<T> GetAll();
 
