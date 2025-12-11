@@ -4,7 +4,7 @@
 using IdGen;
 using System;
 
-namespace Tribufu.Database
+namespace Tribufu.Platform
 {
     public static class FlakeGenerator
     {

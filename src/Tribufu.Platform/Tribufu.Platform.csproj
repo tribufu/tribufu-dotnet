@@ -15,6 +15,9 @@
         <None Include="README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
     <ItemGroup>
+        <PackageReference Include="IdGen" />
+    </ItemGroup>
+    <ItemGroup>
         <ProjectReference Include="..\Tribufu.ComponentModel\Tribufu.ComponentModel.csproj" />
         <ProjectReference Include="..\Tribufu.Logging\Tribufu.Logging.csproj" />
     </ItemGroup>
