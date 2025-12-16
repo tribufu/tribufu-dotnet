@@ -6,7 +6,7 @@
 [![MIT License][mit-badge]][mit-url]
 [![Discord Chat][discord-badge]][discord-url]
 
-[nuget-badge]: https://img.shields.io/nuget/v/tribufu.svg
+[nuget-badge]: https://img.shields.io/nuget/v/Tribufu.svg
 [nuget-url]: https://www.nuget.org/packages/Tribufu
 [mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [mit-url]: https://github.com/tribufu/tribufu-dotnet/blob/main/LICENSE.txt
