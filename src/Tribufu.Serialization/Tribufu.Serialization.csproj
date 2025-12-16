@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <PackageId>Tribufu.Serialization</PackageId>
-        <Description>Tribufu Serialization Extensions</Description>
+        <Description>Tribufu Serialization</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
     <PropertyGroup>

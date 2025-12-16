@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <PackageId>Tribufu.Platform</PackageId>
-        <Description>Tribufu Runtime Extensions</Description>
+        <Description>Tribufu Platform</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
     <PropertyGroup>

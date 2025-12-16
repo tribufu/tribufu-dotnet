@@ -1,13 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <PackageId>Tribufu.Configuration</PackageId>
-        <Description>Tribufu Configuration Extensions</Description>
+        <Description>Tribufu Configuration</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
     <PropertyGroup>
         <AppDesignerFolder>Properties</AppDesignerFolder>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <IsPublishable>false</IsPublishable>
+        <Nullable>enable</Nullable>
         <OutputType>Library</OutputType>
         <TargetFrameworks>net6.0</TargetFrameworks>
     </PropertyGroup>

@@ -1,7 +1,9 @@
 .vs/
 bin/
 obj/
+releases/*
 
+!releases/.gitkeep
 .DS_Store
 .env
 *.filters

@@ -4,7 +4,7 @@
 using dotenv.net;
 using System;
 using System.Threading.Tasks;
-using Tribufu.Generated.Client;
+using Tribufu.Client;
 using Tribufu.Logging;
 
 namespace Tribufu.Test

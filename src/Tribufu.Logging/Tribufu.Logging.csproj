@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <PackageId>Tribufu.Logging</PackageId>
-        <Description>Tribufu Logging Extensions</Description>
+        <Description>Tribufu Logging</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
     <PropertyGroup>

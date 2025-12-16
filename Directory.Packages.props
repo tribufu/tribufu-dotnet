@@ -3,6 +3,7 @@
         <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     </PropertyGroup>
     <ItemGroup>
+        <PackageVersion Include="CppAst.CodeGen" Version="0.4.1" />
         <PackageVersion Include="dotenv.net" Version="3.2.0" />
         <PackageVersion Include="IdGen" Version="3.0.7" />
         <PackageVersion Include="JsonSubTypes" Version="2.0.1" />

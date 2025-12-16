@@ -4,8 +4,8 @@
 using System;
 using System.Net;
 using System.Runtime.InteropServices;
-using Tribufu.Generated.Api;
-using Tribufu.Generated.Client;
+using Tribufu.Api;
+using Tribufu.Client;
 
 namespace Tribufu
 {

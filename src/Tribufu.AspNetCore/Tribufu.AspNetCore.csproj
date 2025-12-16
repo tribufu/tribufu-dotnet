@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageId>Tribufu.AspNetCore</PackageId>
+        <Description>Tribufu AspNetCore</Description>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+    <PropertyGroup>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IsPublishable>false</IsPublishable>
+        <Nullable>enable</Nullable>
+        <OutputType>Library</OutputType>
+        <TargetFrameworks>net8.0</TargetFrameworks>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+    <ItemGroup>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Tribufu.Configuration\Tribufu.Configuration.csproj" />
+        <ProjectReference Include="..\Tribufu.Logging\Tribufu.Logging.csproj" />
+        <ProjectReference Include="..\Tribufu.Platform\Tribufu.Platform.csproj" />
+    </ItemGroup>
+</Project>

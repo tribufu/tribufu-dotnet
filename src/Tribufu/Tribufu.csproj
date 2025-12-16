@@ -17,6 +17,13 @@
         <None Include="README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\Tribufu.Generated\Tribufu.Generated.csproj" />
+        <PackageReference Include="JsonSubTypes" />
+        <PackageReference Include="Newtonsoft.Json" />
+        <PackageReference Include="Polly" />
+        <PackageReference Include="RestSharp" />
+        <PackageReference Include="System.ComponentModel.Annotations" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Tribufu.Logging\Tribufu.Logging.csproj" />
     </ItemGroup>
 </Project>

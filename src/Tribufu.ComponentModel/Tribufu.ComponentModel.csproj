@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <PackageId>Tribufu.ComponentModel</PackageId>
-        <Description>Tribufu ComponentModel Extensions</Description>
+        <Description>Tribufu ComponentModel</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
     <PropertyGroup>
