@@ -7,6 +7,6 @@ java -jar ./vendor/openapi-generator/openapi-generator-cli.jar generate `
     -g csharp `
     -o . `
     --global-property apis,models,supportingFiles,apiDocs=false,modelDocs=false,apiTests=false,modelTests=false `
-    --additional-properties=packageName=Tribufu,library=restsharp,zeroBasedEnums=true,nullableReferenceTypes=true `
+    --additional-properties=packageName=Tribufu,library=restsharp,targetFramework=net47,zeroBasedEnums=true `
     --openapi-normalizer SET_TAGS_FOR_ALL_OPERATIONS=TribufuGenerated `
     --skip-validate-spec

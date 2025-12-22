@@ -25,7 +25,7 @@ namespace Tribufu
         /// <summary>
         /// Create a <see cref="TribufuApi"/> instance.
         /// </summary>
-        public TribufuApi(string? apiKey = null) : base(CreateConfiguration(apiKey))
+        public TribufuApi(string apiKey = null) : base(CreateConfiguration(apiKey))
         {
         }
 
@@ -63,9 +63,12 @@ namespace Tribufu
         /// // Environment variable TRIBUFU_API_KEY must be set
         /// var api = TribufuApi.FromEnv();
         /// </example>
-        public static TribufuApi? FromEnv(string? prefix = null)
+        public static TribufuApi FromEnv(string prefix = null)
         {
-            prefix ??= "TRIBUFU";
+            if (prefix == null)
+            {
+                prefix = "TRIBUFU";
+            }
 
             var apiKey = Environment.GetEnvironmentVariable($"{prefix}_API_KEY");
 
@@ -110,8 +113,8 @@ namespace Tribufu
         {
             var version = GetVersion();
             var frameworkDescription = RuntimeInformation.FrameworkDescription.Trim();
-            var runtimeIdentifier = RuntimeInformation.RuntimeIdentifier.Trim();
-            return $"Tribufu/{version} ({frameworkDescription}; {runtimeIdentifier})";
+            //var runtimeIdentifier = RuntimeInformation.RuntimeIdentifier.Trim();
+            return $"Tribufu/{version} ({frameworkDescription})"; //; {runtimeIdentifier})";
         }
 
         /// <summary>
@@ -151,7 +154,7 @@ namespace Tribufu
         /// <summary>
         /// Creates a configuration for the Tribufu API client.
         /// </summary>
-        private static Configuration CreateConfiguration(string? apiKey)
+        private static Configuration CreateConfiguration(string apiKey)
         {
             var config = new Configuration
             {

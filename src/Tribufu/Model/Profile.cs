@@ -53,7 +53,7 @@ namespace Tribufu.Model
         /// <param name="viewCount">viewCount.</param>
         /// <param name="created">created.</param>
         /// <param name="updated">updated.</param>
-        public Profile(string id = default(string), Guid uuid = default(Guid), string name = default(string), string displayName = default(string), bool verified = default(bool), int level = default(int), double experience = default(double), bool publicBirthday = default(bool), DateOnly? birthday = default(DateOnly?), double points = default(double), string location = default(string), string photoUrl = default(string), string bannerUrl = default(string), DateTime? lastOnline = default(DateTime?), string biography = default(string), int viewCount = default(int), DateTime created = default(DateTime), DateTime? updated = default(DateTime?))
+        public Profile(string id = default(string), Guid uuid = default(Guid), string name = default(string), string displayName = default(string), bool verified = default(bool), int level = default(int), double experience = default(double), bool publicBirthday = default(bool), DateTime? birthday = default(DateTime?), double points = default(double), string location = default(string), string photoUrl = default(string), string bannerUrl = default(string), DateTime? lastOnline = default(DateTime?), string biography = default(string), int viewCount = default(int), DateTime created = default(DateTime), DateTime? updated = default(DateTime?))
         {
             this.Id = id;
             this.Uuid = uuid;
@@ -127,7 +127,8 @@ namespace Tribufu.Model
         /// Gets or Sets Birthday
         /// </summary>
         [DataMember(Name = "birthday", EmitDefaultValue = true)]
-        public DateOnly? Birthday { get; set; }
+        [JsonConverter(typeof(OpenAPIDateConverter))]
+        public DateTime? Birthday { get; set; }
 
         /// <summary>
         /// Gets or Sets Points

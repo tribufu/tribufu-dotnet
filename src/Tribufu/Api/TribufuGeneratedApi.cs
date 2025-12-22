@@ -37,7 +37,7 @@ namespace Tribufu.Api
         /// <param name="authorizeRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CodeResponse</returns>
-        CodeResponse Authorize(AuthorizeRequest? authorizeRequest = default(AuthorizeRequest?), int operationIndex = 0);
+        CodeResponse Authorize(AuthorizeRequest authorizeRequest = default(AuthorizeRequest), int operationIndex = 0);
 
         /// <summary>
         /// Authorize the client to access the user information.
@@ -49,7 +49,7 @@ namespace Tribufu.Api
         /// <param name="authorizeRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CodeResponse</returns>
-        ApiResponse<CodeResponse> AuthorizeWithHttpInfo(AuthorizeRequest? authorizeRequest = default(AuthorizeRequest?), int operationIndex = 0);
+        ApiResponse<CodeResponse> AuthorizeWithHttpInfo(AuthorizeRequest authorizeRequest = default(AuthorizeRequest), int operationIndex = 0);
         /// <summary>
         /// Change the email of a user.
         /// </summary>
@@ -61,7 +61,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void ChangeEmail(string id, Object? body = default(Object?), int operationIndex = 0);
+        void ChangeEmail(string id, Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Change the email of a user.
@@ -74,7 +74,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ChangeEmailWithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> ChangeEmailWithHttpInfo(string id, Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Change the password of a user.
         /// </summary>
@@ -86,7 +86,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void ChangePassword(string id, Object? body = default(Object?), int operationIndex = 0);
+        void ChangePassword(string id, Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Change the password of a user.
@@ -99,7 +99,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ChangePasswordWithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> ChangePasswordWithHttpInfo(string id, Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Claim a game server.
         /// </summary>
@@ -111,7 +111,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void ClaimGameServer(string id, Object? body = default(Object?), int operationIndex = 0);
+        void ClaimGameServer(string id, Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Claim a game server.
@@ -124,7 +124,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ClaimGameServerWithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> ClaimGameServerWithHttpInfo(string id, Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Claim a game server.
         /// </summary>
@@ -137,7 +137,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
         [Obsolete]
-        void ClaimGameServerV1(string id, Object? body = default(Object?), int operationIndex = 0);
+        void ClaimGameServerV1(string id, Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Claim a game server.
@@ -151,7 +151,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
-        ApiResponse<Object> ClaimGameServerV1WithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> ClaimGameServerV1WithHttpInfo(string id, Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Convert a string to base64 or vice versa.
         /// </summary>
@@ -162,7 +162,7 @@ namespace Tribufu.Api
         /// <param name="cryptoViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CryptoViewModel</returns>
-        CryptoViewModel ConvertBase64(CryptoViewModel? cryptoViewModel = default(CryptoViewModel?), int operationIndex = 0);
+        CryptoViewModel ConvertBase64(CryptoViewModel cryptoViewModel = default(CryptoViewModel), int operationIndex = 0);
 
         /// <summary>
         /// Convert a string to base64 or vice versa.
@@ -174,7 +174,7 @@ namespace Tribufu.Api
         /// <param name="cryptoViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CryptoViewModel</returns>
-        ApiResponse<CryptoViewModel> ConvertBase64WithHttpInfo(CryptoViewModel? cryptoViewModel = default(CryptoViewModel?), int operationIndex = 0);
+        ApiResponse<CryptoViewModel> ConvertBase64WithHttpInfo(CryptoViewModel cryptoViewModel = default(CryptoViewModel), int operationIndex = 0);
         /// <summary>
         /// Create an oauth2 client.
         /// </summary>
@@ -185,7 +185,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void CreateClient(Object? body = default(Object?), int operationIndex = 0);
+        void CreateClient(Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Create an oauth2 client.
@@ -197,7 +197,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateClientWithHttpInfo(Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> CreateClientWithHttpInfo(Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Create a new game server.
         /// </summary>
@@ -208,7 +208,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void CreateGameServer(Object? body = default(Object?), int operationIndex = 0);
+        void CreateGameServer(Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Create a new game server.
@@ -220,7 +220,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateGameServerWithHttpInfo(Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> CreateGameServerWithHttpInfo(Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Create a new game server cluster.
         /// </summary>
@@ -231,7 +231,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void CreateGameServerCluster(Object? body = default(Object?), int operationIndex = 0);
+        void CreateGameServerCluster(Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Create a new game server cluster.
@@ -243,7 +243,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateGameServerClusterWithHttpInfo(Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> CreateGameServerClusterWithHttpInfo(Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Create a new game server cluster.
         /// </summary>
@@ -255,7 +255,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
         [Obsolete]
-        void CreateGameServerClusterV1(Object? body = default(Object?), int operationIndex = 0);
+        void CreateGameServerClusterV1(Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Create a new game server cluster.
@@ -268,7 +268,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
-        ApiResponse<Object> CreateGameServerClusterV1WithHttpInfo(Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> CreateGameServerClusterV1WithHttpInfo(Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Create a new game server.
         /// </summary>
@@ -280,7 +280,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
         [Obsolete]
-        void CreateGameServerV1(Object? body = default(Object?), int operationIndex = 0);
+        void CreateGameServerV1(Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Create a new game server.
@@ -293,7 +293,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
-        ApiResponse<Object> CreateGameServerV1WithHttpInfo(Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> CreateGameServerV1WithHttpInfo(Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Create a new group.
         /// </summary>
@@ -304,7 +304,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void CreateGroup(Object? body = default(Object?), int operationIndex = 0);
+        void CreateGroup(Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Create a new group.
@@ -316,7 +316,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateGroupWithHttpInfo(Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> CreateGroupWithHttpInfo(Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Create a new package.
         /// </summary>
@@ -331,7 +331,7 @@ namespace Tribufu.Api
         /// <param name="description"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Package</returns>
-        Package CreatePackage(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string? description = default(string?), int operationIndex = 0);
+        Package CreatePackage(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string description = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Create a new package.
@@ -347,7 +347,7 @@ namespace Tribufu.Api
         /// <param name="description"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Package</returns>
-        ApiResponse<Package> CreatePackageWithHttpInfo(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string? description = default(string?), int operationIndex = 0);
+        ApiResponse<Package> CreatePackageWithHttpInfo(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string description = default(string), int operationIndex = 0);
         /// <summary>
         /// Create a new token with grant type.
         /// </summary>
@@ -355,7 +355,7 @@ namespace Tribufu.Api
         /// <param name="tokenRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TokenResponse</returns>
-        TokenResponse CreateToken(TokenRequest? tokenRequest = default(TokenRequest?), int operationIndex = 0);
+        TokenResponse CreateToken(TokenRequest tokenRequest = default(TokenRequest), int operationIndex = 0);
 
         /// <summary>
         /// Create a new token with grant type.
@@ -367,7 +367,7 @@ namespace Tribufu.Api
         /// <param name="tokenRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TokenResponse</returns>
-        ApiResponse<TokenResponse> CreateTokenWithHttpInfo(TokenRequest? tokenRequest = default(TokenRequest?), int operationIndex = 0);
+        ApiResponse<TokenResponse> CreateTokenWithHttpInfo(TokenRequest tokenRequest = default(TokenRequest), int operationIndex = 0);
         /// <summary>
         /// Create an user.
         /// </summary>
@@ -378,7 +378,7 @@ namespace Tribufu.Api
         /// <param name="createUser"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void CreateUser(CreateUser? createUser = default(CreateUser?), int operationIndex = 0);
+        void CreateUser(CreateUser createUser = default(CreateUser), int operationIndex = 0);
 
         /// <summary>
         /// Create an user.
@@ -390,7 +390,7 @@ namespace Tribufu.Api
         /// <param name="createUser"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateUserWithHttpInfo(CreateUser? createUser = default(CreateUser?), int operationIndex = 0);
+        ApiResponse<Object> CreateUserWithHttpInfo(CreateUser createUser = default(CreateUser), int operationIndex = 0);
         /// <summary>
         /// Delete an oauth2 client.
         /// </summary>
@@ -707,7 +707,7 @@ namespace Tribufu.Api
         /// <param name="limit">The maximum number of items to return per page. Defaults to the defined pagination limit. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;ModelClient&gt;</returns>
-        List<ModelClient> GetClients(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
+        List<ModelClient> GetClients(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// Get a list of oauth2 clients.
@@ -721,7 +721,7 @@ namespace Tribufu.Api
         /// <param name="limit">The maximum number of items to return per page. Defaults to the defined pagination limit. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;ModelClient&gt;</returns>
-        ApiResponse<List<ModelClient>> GetClientsWithHttpInfo(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
+        ApiResponse<List<ModelClient>> GetClientsWithHttpInfo(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
         /// <summary>
         /// Get current ip address location.
         /// </summary>
@@ -1090,7 +1090,7 @@ namespace Tribufu.Api
         /// <param name="limit">The maximum number of items to return per page. Defaults to the defined pagination limit. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;GameServer&gt;</returns>
-        List<GameServer> GetGameServers(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
+        List<GameServer> GetGameServers(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// Get a list of game servers.
@@ -1107,7 +1107,7 @@ namespace Tribufu.Api
         /// <param name="limit">The maximum number of items to return per page. Defaults to the defined pagination limit. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;GameServer&gt;</returns>
-        ApiResponse<List<GameServer>> GetGameServersWithHttpInfo(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
+        ApiResponse<List<GameServer>> GetGameServersWithHttpInfo(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
         /// <summary>
         /// Get a list of game servers from a country.
         /// </summary>
@@ -1268,7 +1268,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;GameServer&gt;</returns>
         [Obsolete]
-        List<GameServer> GetGameServersV1(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
+        List<GameServer> GetGameServersV1(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// Get a list of game servers.
@@ -1286,7 +1286,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;GameServer&gt;</returns>
         [Obsolete]
-        ApiResponse<List<GameServer>> GetGameServersV1WithHttpInfo(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
+        ApiResponse<List<GameServer>> GetGameServersV1WithHttpInfo(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
         /// <summary>
         /// Get a list of games.
         /// </summary>
@@ -1484,7 +1484,7 @@ namespace Tribufu.Api
         /// <param name="limit">The maximum number of items to return per page. Defaults to the defined pagination limit. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;IpAddress&gt;</returns>
-        List<IpAddress> GetIpAddresses(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
+        List<IpAddress> GetIpAddresses(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// Get a list of ip addresses.
@@ -1498,7 +1498,7 @@ namespace Tribufu.Api
         /// <param name="limit">The maximum number of items to return per page. Defaults to the defined pagination limit. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;IpAddress&gt;</returns>
-        ApiResponse<List<IpAddress>> GetIpAddressesWithHttpInfo(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
+        ApiResponse<List<IpAddress>> GetIpAddressesWithHttpInfo(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0);
         /// <summary>
         /// Get the top 20 leaderboard users.
         /// </summary>
@@ -2134,7 +2134,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HashViewModel</returns>
-        HashViewModel HashArgon2(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0);
+        HashViewModel HashArgon2(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0);
 
         /// <summary>
         /// Hash a string using argon2.
@@ -2146,7 +2146,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HashViewModel</returns>
-        ApiResponse<HashViewModel> HashArgon2WithHttpInfo(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0);
+        ApiResponse<HashViewModel> HashArgon2WithHttpInfo(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0);
         /// <summary>
         /// Hash a string using bcrypt.
         /// </summary>
@@ -2157,7 +2157,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HashViewModel</returns>
-        HashViewModel HashBcrypt(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0);
+        HashViewModel HashBcrypt(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0);
 
         /// <summary>
         /// Hash a string using bcrypt.
@@ -2169,7 +2169,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HashViewModel</returns>
-        ApiResponse<HashViewModel> HashBcryptWithHttpInfo(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0);
+        ApiResponse<HashViewModel> HashBcryptWithHttpInfo(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0);
         /// <summary>
         /// Hash a string using md5.
         /// </summary>
@@ -2180,7 +2180,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HashViewModel</returns>
-        HashViewModel HashMd5(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0);
+        HashViewModel HashMd5(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0);
 
         /// <summary>
         /// Hash a string using md5.
@@ -2192,7 +2192,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HashViewModel</returns>
-        ApiResponse<HashViewModel> HashMd5WithHttpInfo(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0);
+        ApiResponse<HashViewModel> HashMd5WithHttpInfo(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0);
         /// <summary>
         /// Hash a string using sha256.
         /// </summary>
@@ -2203,7 +2203,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HashViewModel</returns>
-        HashViewModel HashSha256(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0);
+        HashViewModel HashSha256(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0);
 
         /// <summary>
         /// Hash a string using sha256.
@@ -2215,7 +2215,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HashViewModel</returns>
-        ApiResponse<HashViewModel> HashSha256WithHttpInfo(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0);
+        ApiResponse<HashViewModel> HashSha256WithHttpInfo(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0);
         /// <summary>
         /// Introspect a token.
         /// </summary>
@@ -2223,7 +2223,7 @@ namespace Tribufu.Api
         /// <param name="introspectRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>IntrospectResponse</returns>
-        IntrospectResponse IntrospectToken(IntrospectRequest? introspectRequest = default(IntrospectRequest?), int operationIndex = 0);
+        IntrospectResponse IntrospectToken(IntrospectRequest introspectRequest = default(IntrospectRequest), int operationIndex = 0);
 
         /// <summary>
         /// Introspect a token.
@@ -2235,7 +2235,7 @@ namespace Tribufu.Api
         /// <param name="introspectRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of IntrospectResponse</returns>
-        ApiResponse<IntrospectResponse> IntrospectTokenWithHttpInfo(IntrospectRequest? introspectRequest = default(IntrospectRequest?), int operationIndex = 0);
+        ApiResponse<IntrospectResponse> IntrospectTokenWithHttpInfo(IntrospectRequest introspectRequest = default(IntrospectRequest), int operationIndex = 0);
         /// <summary>
         /// Revoke a token.
         /// </summary>
@@ -2243,7 +2243,7 @@ namespace Tribufu.Api
         /// <param name="revokeRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void RevokeToken(RevokeRequest? revokeRequest = default(RevokeRequest?), int operationIndex = 0);
+        void RevokeToken(RevokeRequest revokeRequest = default(RevokeRequest), int operationIndex = 0);
 
         /// <summary>
         /// Revoke a token.
@@ -2255,7 +2255,7 @@ namespace Tribufu.Api
         /// <param name="revokeRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RevokeTokenWithHttpInfo(RevokeRequest? revokeRequest = default(RevokeRequest?), int operationIndex = 0);
+        ApiResponse<Object> RevokeTokenWithHttpInfo(RevokeRequest revokeRequest = default(RevokeRequest), int operationIndex = 0);
         /// <summary>
         /// Advanced search.
         /// </summary>
@@ -2266,7 +2266,7 @@ namespace Tribufu.Api
         /// <param name="search"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;Object&gt;</returns>
-        List<Object> Search(Search? search = default(Search?), int operationIndex = 0);
+        List<Object> Search(Search search = default(Search), int operationIndex = 0);
 
         /// <summary>
         /// Advanced search.
@@ -2278,7 +2278,7 @@ namespace Tribufu.Api
         /// <param name="search"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
-        ApiResponse<List<Object>> SearchWithHttpInfo(Search? search = default(Search?), int operationIndex = 0);
+        ApiResponse<List<Object>> SearchWithHttpInfo(Search search = default(Search), int operationIndex = 0);
         /// <summary>
         /// Update an oauth2 client.
         /// </summary>
@@ -2290,7 +2290,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void UpdateClient(string id, Object? body = default(Object?), int operationIndex = 0);
+        void UpdateClient(string id, Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Update an oauth2 client.
@@ -2303,7 +2303,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateClientWithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> UpdateClientWithHttpInfo(string id, Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Update a game server.
         /// </summary>
@@ -2315,7 +2315,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void UpdateGameServer(string id, Object? body = default(Object?), int operationIndex = 0);
+        void UpdateGameServer(string id, Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Update a game server.
@@ -2328,7 +2328,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateGameServerWithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> UpdateGameServerWithHttpInfo(string id, Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Update a game server cluster.
         /// </summary>
@@ -2340,7 +2340,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void UpdateGameServerCluster(string id, Object? body = default(Object?), int operationIndex = 0);
+        void UpdateGameServerCluster(string id, Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Update a game server cluster.
@@ -2353,7 +2353,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateGameServerClusterWithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> UpdateGameServerClusterWithHttpInfo(string id, Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Update a game server cluster.
         /// </summary>
@@ -2366,7 +2366,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
         [Obsolete]
-        void UpdateGameServerClusterV1(string id, Object? body = default(Object?), int operationIndex = 0);
+        void UpdateGameServerClusterV1(string id, Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Update a game server cluster.
@@ -2380,7 +2380,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
-        ApiResponse<Object> UpdateGameServerClusterV1WithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> UpdateGameServerClusterV1WithHttpInfo(string id, Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Update a game server.
         /// </summary>
@@ -2393,7 +2393,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
         [Obsolete]
-        void UpdateGameServerV1(string id, Object? body = default(Object?), int operationIndex = 0);
+        void UpdateGameServerV1(string id, Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Update a game server.
@@ -2407,7 +2407,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
-        ApiResponse<Object> UpdateGameServerV1WithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> UpdateGameServerV1WithHttpInfo(string id, Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Update a group.
         /// </summary>
@@ -2419,7 +2419,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void UpdateGroup(string id, Object? body = default(Object?), int operationIndex = 0);
+        void UpdateGroup(string id, Object body = default(Object), int operationIndex = 0);
 
         /// <summary>
         /// Update a group.
@@ -2432,7 +2432,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateGroupWithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0);
+        ApiResponse<Object> UpdateGroupWithHttpInfo(string id, Object body = default(Object), int operationIndex = 0);
         /// <summary>
         /// Update an package.
         /// </summary>
@@ -2444,7 +2444,7 @@ namespace Tribufu.Api
         /// <param name="package"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void UpdatePackage(string id, Package? package = default(Package?), int operationIndex = 0);
+        void UpdatePackage(string id, Package package = default(Package), int operationIndex = 0);
 
         /// <summary>
         /// Update an package.
@@ -2457,7 +2457,7 @@ namespace Tribufu.Api
         /// <param name="package"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdatePackageWithHttpInfo(string id, Package? package = default(Package?), int operationIndex = 0);
+        ApiResponse<Object> UpdatePackageWithHttpInfo(string id, Package package = default(Package), int operationIndex = 0);
         /// <summary>
         /// Update a user profile.
         /// </summary>
@@ -2469,7 +2469,7 @@ namespace Tribufu.Api
         /// <param name="updateProfile"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Profile</returns>
-        Profile UpdateUserProfile(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0);
+        Profile UpdateUserProfile(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0);
 
         /// <summary>
         /// Update a user profile.
@@ -2482,7 +2482,7 @@ namespace Tribufu.Api
         /// <param name="updateProfile"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Profile</returns>
-        ApiResponse<Profile> UpdateUserProfileWithHttpInfo(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0);
+        ApiResponse<Profile> UpdateUserProfileWithHttpInfo(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0);
         /// <summary>
         /// Update a user profile.
         /// </summary>
@@ -2495,7 +2495,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Profile</returns>
         [Obsolete]
-        Profile UpdateUserProfileV1(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0);
+        Profile UpdateUserProfileV1(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0);
 
         /// <summary>
         /// Update a user profile.
@@ -2509,7 +2509,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Profile</returns>
         [Obsolete]
-        ApiResponse<Profile> UpdateUserProfileV1WithHttpInfo(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0);
+        ApiResponse<Profile> UpdateUserProfileV1WithHttpInfo(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -2530,7 +2530,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CodeResponse</returns>
-        System.Threading.Tasks.Task<CodeResponse> AuthorizeAsync(AuthorizeRequest? authorizeRequest = default(AuthorizeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CodeResponse> AuthorizeAsync(AuthorizeRequest authorizeRequest = default(AuthorizeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Authorize the client to access the user information.
@@ -2543,7 +2543,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CodeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CodeResponse>> AuthorizeWithHttpInfoAsync(AuthorizeRequest? authorizeRequest = default(AuthorizeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CodeResponse>> AuthorizeWithHttpInfoAsync(AuthorizeRequest authorizeRequest = default(AuthorizeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Change the email of a user.
         /// </summary>
@@ -2556,7 +2556,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ChangeEmailAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task ChangeEmailAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Change the email of a user.
@@ -2570,7 +2570,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ChangeEmailWithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ChangeEmailWithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Change the password of a user.
         /// </summary>
@@ -2583,7 +2583,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ChangePasswordAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task ChangePasswordAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Change the password of a user.
@@ -2597,7 +2597,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordWithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordWithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Claim a game server.
         /// </summary>
@@ -2610,7 +2610,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ClaimGameServerAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task ClaimGameServerAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Claim a game server.
@@ -2624,7 +2624,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ClaimGameServerWithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ClaimGameServerWithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Claim a game server.
         /// </summary>
@@ -2638,7 +2638,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         [Obsolete]
-        System.Threading.Tasks.Task ClaimGameServerV1Async(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task ClaimGameServerV1Async(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Claim a game server.
@@ -2653,7 +2653,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<Object>> ClaimGameServerV1WithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ClaimGameServerV1WithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Convert a string to base64 or vice versa.
         /// </summary>
@@ -2665,7 +2665,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CryptoViewModel</returns>
-        System.Threading.Tasks.Task<CryptoViewModel> ConvertBase64Async(CryptoViewModel? cryptoViewModel = default(CryptoViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CryptoViewModel> ConvertBase64Async(CryptoViewModel cryptoViewModel = default(CryptoViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Convert a string to base64 or vice versa.
@@ -2678,7 +2678,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CryptoViewModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CryptoViewModel>> ConvertBase64WithHttpInfoAsync(CryptoViewModel? cryptoViewModel = default(CryptoViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CryptoViewModel>> ConvertBase64WithHttpInfoAsync(CryptoViewModel cryptoViewModel = default(CryptoViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create an oauth2 client.
         /// </summary>
@@ -2690,7 +2690,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateClientAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task CreateClientAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create an oauth2 client.
@@ -2703,7 +2703,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateClientWithHttpInfoAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateClientWithHttpInfoAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a new game server.
         /// </summary>
@@ -2715,7 +2715,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateGameServerAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task CreateGameServerAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new game server.
@@ -2728,7 +2728,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateGameServerWithHttpInfoAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateGameServerWithHttpInfoAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a new game server cluster.
         /// </summary>
@@ -2740,7 +2740,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateGameServerClusterAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task CreateGameServerClusterAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new game server cluster.
@@ -2753,7 +2753,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateGameServerClusterWithHttpInfoAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateGameServerClusterWithHttpInfoAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a new game server cluster.
         /// </summary>
@@ -2766,7 +2766,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         [Obsolete]
-        System.Threading.Tasks.Task CreateGameServerClusterV1Async(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task CreateGameServerClusterV1Async(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new game server cluster.
@@ -2780,7 +2780,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateGameServerClusterV1WithHttpInfoAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateGameServerClusterV1WithHttpInfoAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a new game server.
         /// </summary>
@@ -2793,7 +2793,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         [Obsolete]
-        System.Threading.Tasks.Task CreateGameServerV1Async(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task CreateGameServerV1Async(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new game server.
@@ -2807,7 +2807,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateGameServerV1WithHttpInfoAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateGameServerV1WithHttpInfoAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a new group.
         /// </summary>
@@ -2819,7 +2819,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateGroupAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task CreateGroupAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new group.
@@ -2832,7 +2832,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateGroupWithHttpInfoAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateGroupWithHttpInfoAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a new package.
         /// </summary>
@@ -2848,7 +2848,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Package</returns>
-        System.Threading.Tasks.Task<Package> CreatePackageAsync(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string? description = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Package> CreatePackageAsync(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string description = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new package.
@@ -2865,7 +2865,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Package)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Package>> CreatePackageWithHttpInfoAsync(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string? description = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Package>> CreatePackageWithHttpInfoAsync(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string description = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a new token with grant type.
         /// </summary>
@@ -2877,7 +2877,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TokenResponse</returns>
-        System.Threading.Tasks.Task<TokenResponse> CreateTokenAsync(TokenRequest? tokenRequest = default(TokenRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TokenResponse> CreateTokenAsync(TokenRequest tokenRequest = default(TokenRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new token with grant type.
@@ -2890,7 +2890,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TokenResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TokenResponse>> CreateTokenWithHttpInfoAsync(TokenRequest? tokenRequest = default(TokenRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TokenResponse>> CreateTokenWithHttpInfoAsync(TokenRequest tokenRequest = default(TokenRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create an user.
         /// </summary>
@@ -2902,7 +2902,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateUserAsync(CreateUser? createUser = default(CreateUser?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task CreateUserAsync(CreateUser createUser = default(CreateUser), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create an user.
@@ -2915,7 +2915,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateUserWithHttpInfoAsync(CreateUser? createUser = default(CreateUser?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateUserWithHttpInfoAsync(CreateUser createUser = default(CreateUser), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete an oauth2 client.
         /// </summary>
@@ -3262,7 +3262,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ModelClient&gt;</returns>
-        System.Threading.Tasks.Task<List<ModelClient>> GetClientsAsync(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<ModelClient>> GetClientsAsync(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get a list of oauth2 clients.
@@ -3277,7 +3277,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ModelClient&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ModelClient>>> GetClientsWithHttpInfoAsync(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<ModelClient>>> GetClientsWithHttpInfoAsync(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get current ip address location.
         /// </summary>
@@ -3678,7 +3678,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;GameServer&gt;</returns>
-        System.Threading.Tasks.Task<List<GameServer>> GetGameServersAsync(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<GameServer>> GetGameServersAsync(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get a list of game servers.
@@ -3696,7 +3696,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;GameServer&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<GameServer>>> GetGameServersWithHttpInfoAsync(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<GameServer>>> GetGameServersWithHttpInfoAsync(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get a list of game servers from a country.
         /// </summary>
@@ -3870,7 +3870,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;GameServer&gt;</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<List<GameServer>> GetGameServersV1Async(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<GameServer>> GetGameServersV1Async(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get a list of game servers.
@@ -3889,7 +3889,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;GameServer&gt;)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<List<GameServer>>> GetGameServersV1WithHttpInfoAsync(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<GameServer>>> GetGameServersV1WithHttpInfoAsync(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get a list of games.
         /// </summary>
@@ -4107,7 +4107,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;IpAddress&gt;</returns>
-        System.Threading.Tasks.Task<List<IpAddress>> GetIpAddressesAsync(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<IpAddress>> GetIpAddressesAsync(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get a list of ip addresses.
@@ -4122,7 +4122,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;IpAddress&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<IpAddress>>> GetIpAddressesWithHttpInfoAsync(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<IpAddress>>> GetIpAddressesWithHttpInfoAsync(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get the top 20 leaderboard users.
         /// </summary>
@@ -4814,7 +4814,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HashViewModel</returns>
-        System.Threading.Tasks.Task<HashViewModel> HashArgon2Async(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<HashViewModel> HashArgon2Async(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Hash a string using argon2.
@@ -4827,7 +4827,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HashViewModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HashViewModel>> HashArgon2WithHttpInfoAsync(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<HashViewModel>> HashArgon2WithHttpInfoAsync(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Hash a string using bcrypt.
         /// </summary>
@@ -4839,7 +4839,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HashViewModel</returns>
-        System.Threading.Tasks.Task<HashViewModel> HashBcryptAsync(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<HashViewModel> HashBcryptAsync(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Hash a string using bcrypt.
@@ -4852,7 +4852,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HashViewModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HashViewModel>> HashBcryptWithHttpInfoAsync(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<HashViewModel>> HashBcryptWithHttpInfoAsync(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Hash a string using md5.
         /// </summary>
@@ -4864,7 +4864,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HashViewModel</returns>
-        System.Threading.Tasks.Task<HashViewModel> HashMd5Async(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<HashViewModel> HashMd5Async(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Hash a string using md5.
@@ -4877,7 +4877,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HashViewModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HashViewModel>> HashMd5WithHttpInfoAsync(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<HashViewModel>> HashMd5WithHttpInfoAsync(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Hash a string using sha256.
         /// </summary>
@@ -4889,7 +4889,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HashViewModel</returns>
-        System.Threading.Tasks.Task<HashViewModel> HashSha256Async(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<HashViewModel> HashSha256Async(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Hash a string using sha256.
@@ -4902,7 +4902,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HashViewModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HashViewModel>> HashSha256WithHttpInfoAsync(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<HashViewModel>> HashSha256WithHttpInfoAsync(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Introspect a token.
         /// </summary>
@@ -4914,7 +4914,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of IntrospectResponse</returns>
-        System.Threading.Tasks.Task<IntrospectResponse> IntrospectTokenAsync(IntrospectRequest? introspectRequest = default(IntrospectRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<IntrospectResponse> IntrospectTokenAsync(IntrospectRequest introspectRequest = default(IntrospectRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Introspect a token.
@@ -4927,7 +4927,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (IntrospectResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IntrospectResponse>> IntrospectTokenWithHttpInfoAsync(IntrospectRequest? introspectRequest = default(IntrospectRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<IntrospectResponse>> IntrospectTokenWithHttpInfoAsync(IntrospectRequest introspectRequest = default(IntrospectRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Revoke a token.
         /// </summary>
@@ -4939,7 +4939,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RevokeTokenAsync(RevokeRequest? revokeRequest = default(RevokeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task RevokeTokenAsync(RevokeRequest revokeRequest = default(RevokeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Revoke a token.
@@ -4952,7 +4952,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RevokeTokenWithHttpInfoAsync(RevokeRequest? revokeRequest = default(RevokeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> RevokeTokenWithHttpInfoAsync(RevokeRequest revokeRequest = default(RevokeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Advanced search.
         /// </summary>
@@ -4964,7 +4964,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Object&gt;</returns>
-        System.Threading.Tasks.Task<List<Object>> SearchAsync(Search? search = default(Search?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<Object>> SearchAsync(Search search = default(Search), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Advanced search.
@@ -4977,7 +4977,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Object>>> SearchWithHttpInfoAsync(Search? search = default(Search?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<Object>>> SearchWithHttpInfoAsync(Search search = default(Search), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update an oauth2 client.
         /// </summary>
@@ -4990,7 +4990,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateClientAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task UpdateClientAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update an oauth2 client.
@@ -5004,7 +5004,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateClientWithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateClientWithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update a game server.
         /// </summary>
@@ -5017,7 +5017,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateGameServerAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task UpdateGameServerAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a game server.
@@ -5031,7 +5031,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateGameServerWithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateGameServerWithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update a game server cluster.
         /// </summary>
@@ -5044,7 +5044,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateGameServerClusterAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task UpdateGameServerClusterAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a game server cluster.
@@ -5058,7 +5058,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateGameServerClusterWithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateGameServerClusterWithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update a game server cluster.
         /// </summary>
@@ -5072,7 +5072,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         [Obsolete]
-        System.Threading.Tasks.Task UpdateGameServerClusterV1Async(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task UpdateGameServerClusterV1Async(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a game server cluster.
@@ -5087,7 +5087,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateGameServerClusterV1WithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateGameServerClusterV1WithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update a game server.
         /// </summary>
@@ -5101,7 +5101,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         [Obsolete]
-        System.Threading.Tasks.Task UpdateGameServerV1Async(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task UpdateGameServerV1Async(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a game server.
@@ -5116,7 +5116,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateGameServerV1WithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateGameServerV1WithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update a group.
         /// </summary>
@@ -5129,7 +5129,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateGroupAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task UpdateGroupAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a group.
@@ -5143,7 +5143,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateGroupWithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateGroupWithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update an package.
         /// </summary>
@@ -5156,7 +5156,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdatePackageAsync(string id, Package? package = default(Package?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task UpdatePackageAsync(string id, Package package = default(Package), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update an package.
@@ -5170,7 +5170,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdatePackageWithHttpInfoAsync(string id, Package? package = default(Package?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdatePackageWithHttpInfoAsync(string id, Package package = default(Package), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update a user profile.
         /// </summary>
@@ -5183,7 +5183,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Profile</returns>
-        System.Threading.Tasks.Task<Profile> UpdateUserProfileAsync(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Profile> UpdateUserProfileAsync(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a user profile.
@@ -5197,7 +5197,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Profile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Profile>> UpdateUserProfileWithHttpInfoAsync(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Profile>> UpdateUserProfileWithHttpInfoAsync(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update a user profile.
         /// </summary>
@@ -5211,7 +5211,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Profile</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<Profile> UpdateUserProfileV1Async(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Profile> UpdateUserProfileV1Async(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update a user profile.
@@ -5226,7 +5226,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Profile)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<Profile>> UpdateUserProfileV1WithHttpInfoAsync(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Profile>> UpdateUserProfileV1WithHttpInfoAsync(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -5354,7 +5354,7 @@ namespace Tribufu.Api
         /// <param name="authorizeRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CodeResponse</returns>
-        public CodeResponse Authorize(AuthorizeRequest? authorizeRequest = default(AuthorizeRequest?), int operationIndex = 0)
+        public CodeResponse Authorize(AuthorizeRequest authorizeRequest = default(AuthorizeRequest), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<CodeResponse> localVarResponse = AuthorizeWithHttpInfo(authorizeRequest);
             return localVarResponse.Data;
@@ -5367,7 +5367,7 @@ namespace Tribufu.Api
         /// <param name="authorizeRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CodeResponse</returns>
-        public Tribufu.Client.ApiResponse<CodeResponse> AuthorizeWithHttpInfo(AuthorizeRequest? authorizeRequest = default(AuthorizeRequest?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<CodeResponse> AuthorizeWithHttpInfo(AuthorizeRequest authorizeRequest = default(AuthorizeRequest), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -5426,7 +5426,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CodeResponse</returns>
-        public async System.Threading.Tasks.Task<CodeResponse> AuthorizeAsync(AuthorizeRequest? authorizeRequest = default(AuthorizeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CodeResponse> AuthorizeAsync(AuthorizeRequest authorizeRequest = default(AuthorizeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<CodeResponse> localVarResponse = await AuthorizeWithHttpInfoAsync(authorizeRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5440,7 +5440,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CodeResponse)</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<CodeResponse>> AuthorizeWithHttpInfoAsync(AuthorizeRequest? authorizeRequest = default(AuthorizeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<CodeResponse>> AuthorizeWithHttpInfoAsync(AuthorizeRequest authorizeRequest = default(AuthorizeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -5500,7 +5500,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void ChangeEmail(string id, Object? body = default(Object?), int operationIndex = 0)
+        public void ChangeEmail(string id, Object body = default(Object), int operationIndex = 0)
         {
             ChangeEmailWithHttpInfo(id, body);
         }
@@ -5513,7 +5513,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Tribufu.Client.ApiResponse<Object> ChangeEmailWithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> ChangeEmailWithHttpInfo(string id, Object body = default(Object), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -5582,7 +5582,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ChangeEmailAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task ChangeEmailAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await ChangeEmailWithHttpInfoAsync(id, body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -5596,7 +5596,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> ChangeEmailWithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> ChangeEmailWithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -5665,7 +5665,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void ChangePassword(string id, Object? body = default(Object?), int operationIndex = 0)
+        public void ChangePassword(string id, Object body = default(Object), int operationIndex = 0)
         {
             ChangePasswordWithHttpInfo(id, body);
         }
@@ -5678,7 +5678,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Tribufu.Client.ApiResponse<Object> ChangePasswordWithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> ChangePasswordWithHttpInfo(string id, Object body = default(Object), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -5747,7 +5747,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ChangePasswordAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task ChangePasswordAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await ChangePasswordWithHttpInfoAsync(id, body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -5761,7 +5761,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> ChangePasswordWithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> ChangePasswordWithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -5830,7 +5830,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void ClaimGameServer(string id, Object? body = default(Object?), int operationIndex = 0)
+        public void ClaimGameServer(string id, Object body = default(Object), int operationIndex = 0)
         {
             ClaimGameServerWithHttpInfo(id, body);
         }
@@ -5843,7 +5843,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Tribufu.Client.ApiResponse<Object> ClaimGameServerWithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> ClaimGameServerWithHttpInfo(string id, Object body = default(Object), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -5909,7 +5909,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ClaimGameServerAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task ClaimGameServerAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await ClaimGameServerWithHttpInfoAsync(id, body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -5923,7 +5923,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> ClaimGameServerWithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> ClaimGameServerWithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -5990,7 +5990,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
         [Obsolete]
-        public void ClaimGameServerV1(string id, Object? body = default(Object?), int operationIndex = 0)
+        public void ClaimGameServerV1(string id, Object body = default(Object), int operationIndex = 0)
         {
             ClaimGameServerV1WithHttpInfo(id, body);
         }
@@ -6004,7 +6004,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
-        public Tribufu.Client.ApiResponse<Object> ClaimGameServerV1WithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> ClaimGameServerV1WithHttpInfo(string id, Object body = default(Object), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -6071,7 +6071,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task ClaimGameServerV1Async(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task ClaimGameServerV1Async(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await ClaimGameServerV1WithHttpInfoAsync(id, body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -6086,7 +6086,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> ClaimGameServerV1WithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> ClaimGameServerV1WithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -6151,7 +6151,7 @@ namespace Tribufu.Api
         /// <param name="cryptoViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CryptoViewModel</returns>
-        public CryptoViewModel ConvertBase64(CryptoViewModel? cryptoViewModel = default(CryptoViewModel?), int operationIndex = 0)
+        public CryptoViewModel ConvertBase64(CryptoViewModel cryptoViewModel = default(CryptoViewModel), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<CryptoViewModel> localVarResponse = ConvertBase64WithHttpInfo(cryptoViewModel);
             return localVarResponse.Data;
@@ -6164,7 +6164,7 @@ namespace Tribufu.Api
         /// <param name="cryptoViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CryptoViewModel</returns>
-        public Tribufu.Client.ApiResponse<CryptoViewModel> ConvertBase64WithHttpInfo(CryptoViewModel? cryptoViewModel = default(CryptoViewModel?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<CryptoViewModel> ConvertBase64WithHttpInfo(CryptoViewModel cryptoViewModel = default(CryptoViewModel), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -6223,7 +6223,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CryptoViewModel</returns>
-        public async System.Threading.Tasks.Task<CryptoViewModel> ConvertBase64Async(CryptoViewModel? cryptoViewModel = default(CryptoViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoViewModel> ConvertBase64Async(CryptoViewModel cryptoViewModel = default(CryptoViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<CryptoViewModel> localVarResponse = await ConvertBase64WithHttpInfoAsync(cryptoViewModel, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -6237,7 +6237,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CryptoViewModel)</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<CryptoViewModel>> ConvertBase64WithHttpInfoAsync(CryptoViewModel? cryptoViewModel = default(CryptoViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<CryptoViewModel>> ConvertBase64WithHttpInfoAsync(CryptoViewModel cryptoViewModel = default(CryptoViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -6296,7 +6296,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void CreateClient(Object? body = default(Object?), int operationIndex = 0)
+        public void CreateClient(Object body = default(Object), int operationIndex = 0)
         {
             CreateClientWithHttpInfo(body);
         }
@@ -6308,7 +6308,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Tribufu.Client.ApiResponse<Object> CreateClientWithHttpInfo(Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> CreateClientWithHttpInfo(Object body = default(Object), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -6366,7 +6366,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateClientAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task CreateClientAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await CreateClientWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -6379,7 +6379,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> CreateClientWithHttpInfoAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> CreateClientWithHttpInfoAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -6437,7 +6437,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void CreateGameServer(Object? body = default(Object?), int operationIndex = 0)
+        public void CreateGameServer(Object body = default(Object), int operationIndex = 0)
         {
             CreateGameServerWithHttpInfo(body);
         }
@@ -6449,7 +6449,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Tribufu.Client.ApiResponse<Object> CreateGameServerWithHttpInfo(Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> CreateGameServerWithHttpInfo(Object body = default(Object), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -6507,7 +6507,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateGameServerAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task CreateGameServerAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await CreateGameServerWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -6520,7 +6520,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> CreateGameServerWithHttpInfoAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> CreateGameServerWithHttpInfoAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -6578,7 +6578,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void CreateGameServerCluster(Object? body = default(Object?), int operationIndex = 0)
+        public void CreateGameServerCluster(Object body = default(Object), int operationIndex = 0)
         {
             CreateGameServerClusterWithHttpInfo(body);
         }
@@ -6590,7 +6590,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Tribufu.Client.ApiResponse<Object> CreateGameServerClusterWithHttpInfo(Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> CreateGameServerClusterWithHttpInfo(Object body = default(Object), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -6648,7 +6648,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateGameServerClusterAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task CreateGameServerClusterAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await CreateGameServerClusterWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -6661,7 +6661,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> CreateGameServerClusterWithHttpInfoAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> CreateGameServerClusterWithHttpInfoAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -6720,7 +6720,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
         [Obsolete]
-        public void CreateGameServerClusterV1(Object? body = default(Object?), int operationIndex = 0)
+        public void CreateGameServerClusterV1(Object body = default(Object), int operationIndex = 0)
         {
             CreateGameServerClusterV1WithHttpInfo(body);
         }
@@ -6733,7 +6733,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
-        public Tribufu.Client.ApiResponse<Object> CreateGameServerClusterV1WithHttpInfo(Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> CreateGameServerClusterV1WithHttpInfo(Object body = default(Object), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -6792,7 +6792,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task CreateGameServerClusterV1Async(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task CreateGameServerClusterV1Async(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await CreateGameServerClusterV1WithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -6806,7 +6806,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> CreateGameServerClusterV1WithHttpInfoAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> CreateGameServerClusterV1WithHttpInfoAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -6865,7 +6865,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
         [Obsolete]
-        public void CreateGameServerV1(Object? body = default(Object?), int operationIndex = 0)
+        public void CreateGameServerV1(Object body = default(Object), int operationIndex = 0)
         {
             CreateGameServerV1WithHttpInfo(body);
         }
@@ -6878,7 +6878,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
-        public Tribufu.Client.ApiResponse<Object> CreateGameServerV1WithHttpInfo(Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> CreateGameServerV1WithHttpInfo(Object body = default(Object), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -6937,7 +6937,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task CreateGameServerV1Async(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task CreateGameServerV1Async(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await CreateGameServerV1WithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -6951,7 +6951,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> CreateGameServerV1WithHttpInfoAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> CreateGameServerV1WithHttpInfoAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -7009,7 +7009,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void CreateGroup(Object? body = default(Object?), int operationIndex = 0)
+        public void CreateGroup(Object body = default(Object), int operationIndex = 0)
         {
             CreateGroupWithHttpInfo(body);
         }
@@ -7021,7 +7021,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Tribufu.Client.ApiResponse<Object> CreateGroupWithHttpInfo(Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> CreateGroupWithHttpInfo(Object body = default(Object), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -7079,7 +7079,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateGroupAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task CreateGroupAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await CreateGroupWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -7092,7 +7092,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> CreateGroupWithHttpInfoAsync(Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> CreateGroupWithHttpInfoAsync(Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -7154,7 +7154,7 @@ namespace Tribufu.Api
         /// <param name="description"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Package</returns>
-        public Package CreatePackage(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string? description = default(string?), int operationIndex = 0)
+        public Package CreatePackage(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string description = default(string), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<Package> localVarResponse = CreatePackageWithHttpInfo(name, image, files, version, description);
             return localVarResponse.Data;
@@ -7171,7 +7171,7 @@ namespace Tribufu.Api
         /// <param name="description"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Package</returns>
-        public Tribufu.Client.ApiResponse<Package> CreatePackageWithHttpInfo(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string? description = default(string?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Package> CreatePackageWithHttpInfo(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string description = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7268,7 +7268,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Package</returns>
-        public async System.Threading.Tasks.Task<Package> CreatePackageAsync(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string? description = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Package> CreatePackageAsync(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string description = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<Package> localVarResponse = await CreatePackageWithHttpInfoAsync(name, image, files, version, description, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7286,7 +7286,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Package)</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Package>> CreatePackageWithHttpInfoAsync(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string? description = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Package>> CreatePackageWithHttpInfoAsync(string name, System.IO.Stream image, List<System.IO.Stream> files, string version, string description = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7379,7 +7379,7 @@ namespace Tribufu.Api
         /// <param name="tokenRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TokenResponse</returns>
-        public TokenResponse CreateToken(TokenRequest? tokenRequest = default(TokenRequest?), int operationIndex = 0)
+        public TokenResponse CreateToken(TokenRequest tokenRequest = default(TokenRequest), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<TokenResponse> localVarResponse = CreateTokenWithHttpInfo(tokenRequest);
             return localVarResponse.Data;
@@ -7392,7 +7392,7 @@ namespace Tribufu.Api
         /// <param name="tokenRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TokenResponse</returns>
-        public Tribufu.Client.ApiResponse<TokenResponse> CreateTokenWithHttpInfo(TokenRequest? tokenRequest = default(TokenRequest?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<TokenResponse> CreateTokenWithHttpInfo(TokenRequest tokenRequest = default(TokenRequest), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -7452,7 +7452,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TokenResponse</returns>
-        public async System.Threading.Tasks.Task<TokenResponse> CreateTokenAsync(TokenRequest? tokenRequest = default(TokenRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TokenResponse> CreateTokenAsync(TokenRequest tokenRequest = default(TokenRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<TokenResponse> localVarResponse = await CreateTokenWithHttpInfoAsync(tokenRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7466,7 +7466,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TokenResponse)</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<TokenResponse>> CreateTokenWithHttpInfoAsync(TokenRequest? tokenRequest = default(TokenRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<TokenResponse>> CreateTokenWithHttpInfoAsync(TokenRequest tokenRequest = default(TokenRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -7526,7 +7526,7 @@ namespace Tribufu.Api
         /// <param name="createUser"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void CreateUser(CreateUser? createUser = default(CreateUser?), int operationIndex = 0)
+        public void CreateUser(CreateUser createUser = default(CreateUser), int operationIndex = 0)
         {
             CreateUserWithHttpInfo(createUser);
         }
@@ -7538,7 +7538,7 @@ namespace Tribufu.Api
         /// <param name="createUser"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Tribufu.Client.ApiResponse<Object> CreateUserWithHttpInfo(CreateUser? createUser = default(CreateUser?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> CreateUserWithHttpInfo(CreateUser createUser = default(CreateUser), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -7596,7 +7596,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateUserAsync(CreateUser? createUser = default(CreateUser?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task CreateUserAsync(CreateUser createUser = default(CreateUser), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await CreateUserWithHttpInfoAsync(createUser, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -7609,7 +7609,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> CreateUserWithHttpInfoAsync(CreateUser? createUser = default(CreateUser?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> CreateUserWithHttpInfoAsync(CreateUser createUser = default(CreateUser), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -9664,7 +9664,7 @@ namespace Tribufu.Api
         /// <param name="limit">The maximum number of items to return per page. Defaults to the defined pagination limit. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;ModelClient&gt;</returns>
-        public List<ModelClient> GetClients(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
+        public List<ModelClient> GetClients(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<List<ModelClient>> localVarResponse = GetClientsWithHttpInfo(organizationId, page, limit);
             return localVarResponse.Data;
@@ -9679,7 +9679,7 @@ namespace Tribufu.Api
         /// <param name="limit">The maximum number of items to return per page. Defaults to the defined pagination limit. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;ModelClient&gt;</returns>
-        public Tribufu.Client.ApiResponse<List<ModelClient>> GetClientsWithHttpInfo(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<List<ModelClient>> GetClientsWithHttpInfo(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -9750,7 +9750,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ModelClient&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ModelClient>> GetClientsAsync(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<ModelClient>> GetClientsAsync(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<List<ModelClient>> localVarResponse = await GetClientsWithHttpInfoAsync(organizationId, page, limit, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -9766,7 +9766,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ModelClient&gt;)</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<List<ModelClient>>> GetClientsWithHttpInfoAsync(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<List<ModelClient>>> GetClientsWithHttpInfoAsync(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -12136,7 +12136,7 @@ namespace Tribufu.Api
         /// <param name="limit">The maximum number of items to return per page. Defaults to the defined pagination limit. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;GameServer&gt;</returns>
-        public List<GameServer> GetGameServers(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
+        public List<GameServer> GetGameServers(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<List<GameServer>> localVarResponse = GetGameServersWithHttpInfo(address, queryPort, country, gameId, page, limit);
             return localVarResponse.Data;
@@ -12154,7 +12154,7 @@ namespace Tribufu.Api
         /// <param name="limit">The maximum number of items to return per page. Defaults to the defined pagination limit. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;GameServer&gt;</returns>
-        public Tribufu.Client.ApiResponse<List<GameServer>> GetGameServersWithHttpInfo(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<List<GameServer>> GetGameServersWithHttpInfo(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -12240,7 +12240,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;GameServer&gt;</returns>
-        public async System.Threading.Tasks.Task<List<GameServer>> GetGameServersAsync(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<GameServer>> GetGameServersAsync(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<List<GameServer>> localVarResponse = await GetGameServersWithHttpInfoAsync(address, queryPort, country, gameId, page, limit, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -12259,7 +12259,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;GameServer&gt;)</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<List<GameServer>>> GetGameServersWithHttpInfoAsync(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<List<GameServer>>> GetGameServersWithHttpInfoAsync(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -13264,7 +13264,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;GameServer&gt;</returns>
         [Obsolete]
-        public List<GameServer> GetGameServersV1(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
+        public List<GameServer> GetGameServersV1(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<List<GameServer>> localVarResponse = GetGameServersV1WithHttpInfo(address, queryPort, country, gameId, page, limit);
             return localVarResponse.Data;
@@ -13283,7 +13283,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;GameServer&gt;</returns>
         [Obsolete]
-        public Tribufu.Client.ApiResponse<List<GameServer>> GetGameServersV1WithHttpInfo(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<List<GameServer>> GetGameServersV1WithHttpInfo(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -13370,7 +13370,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;GameServer&gt;</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<List<GameServer>> GetGameServersV1Async(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<GameServer>> GetGameServersV1Async(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<List<GameServer>> localVarResponse = await GetGameServersV1WithHttpInfoAsync(address, queryPort, country, gameId, page, limit, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -13390,7 +13390,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;GameServer&gt;)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<List<GameServer>>> GetGameServersV1WithHttpInfoAsync(string? address = default(string?), int? queryPort = default(int?), string? country = default(string?), string? gameId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<List<GameServer>>> GetGameServersV1WithHttpInfoAsync(string address = default(string), int? queryPort = default(int?), string country = default(string), string gameId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -14717,7 +14717,7 @@ namespace Tribufu.Api
         /// <param name="limit">The maximum number of items to return per page. Defaults to the defined pagination limit. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;IpAddress&gt;</returns>
-        public List<IpAddress> GetIpAddresses(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
+        public List<IpAddress> GetIpAddresses(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<List<IpAddress>> localVarResponse = GetIpAddressesWithHttpInfo(organizationId, page, limit);
             return localVarResponse.Data;
@@ -14732,7 +14732,7 @@ namespace Tribufu.Api
         /// <param name="limit">The maximum number of items to return per page. Defaults to the defined pagination limit. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;IpAddress&gt;</returns>
-        public Tribufu.Client.ApiResponse<List<IpAddress>> GetIpAddressesWithHttpInfo(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<List<IpAddress>> GetIpAddressesWithHttpInfo(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -14803,7 +14803,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;IpAddress&gt;</returns>
-        public async System.Threading.Tasks.Task<List<IpAddress>> GetIpAddressesAsync(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<IpAddress>> GetIpAddressesAsync(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<List<IpAddress>> localVarResponse = await GetIpAddressesWithHttpInfoAsync(organizationId, page, limit, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -14819,7 +14819,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;IpAddress&gt;)</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<List<IpAddress>>> GetIpAddressesWithHttpInfoAsync(string? organizationId = default(string?), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<List<IpAddress>>> GetIpAddressesWithHttpInfoAsync(string organizationId = default(string), int? page = default(int?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -18956,7 +18956,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HashViewModel</returns>
-        public HashViewModel HashArgon2(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0)
+        public HashViewModel HashArgon2(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<HashViewModel> localVarResponse = HashArgon2WithHttpInfo(hashViewModel);
             return localVarResponse.Data;
@@ -18969,7 +18969,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HashViewModel</returns>
-        public Tribufu.Client.ApiResponse<HashViewModel> HashArgon2WithHttpInfo(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<HashViewModel> HashArgon2WithHttpInfo(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -19028,7 +19028,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HashViewModel</returns>
-        public async System.Threading.Tasks.Task<HashViewModel> HashArgon2Async(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<HashViewModel> HashArgon2Async(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<HashViewModel> localVarResponse = await HashArgon2WithHttpInfoAsync(hashViewModel, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -19042,7 +19042,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HashViewModel)</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<HashViewModel>> HashArgon2WithHttpInfoAsync(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<HashViewModel>> HashArgon2WithHttpInfoAsync(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -19101,7 +19101,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HashViewModel</returns>
-        public HashViewModel HashBcrypt(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0)
+        public HashViewModel HashBcrypt(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<HashViewModel> localVarResponse = HashBcryptWithHttpInfo(hashViewModel);
             return localVarResponse.Data;
@@ -19114,7 +19114,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HashViewModel</returns>
-        public Tribufu.Client.ApiResponse<HashViewModel> HashBcryptWithHttpInfo(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<HashViewModel> HashBcryptWithHttpInfo(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -19173,7 +19173,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HashViewModel</returns>
-        public async System.Threading.Tasks.Task<HashViewModel> HashBcryptAsync(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<HashViewModel> HashBcryptAsync(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<HashViewModel> localVarResponse = await HashBcryptWithHttpInfoAsync(hashViewModel, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -19187,7 +19187,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HashViewModel)</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<HashViewModel>> HashBcryptWithHttpInfoAsync(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<HashViewModel>> HashBcryptWithHttpInfoAsync(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -19246,7 +19246,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HashViewModel</returns>
-        public HashViewModel HashMd5(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0)
+        public HashViewModel HashMd5(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<HashViewModel> localVarResponse = HashMd5WithHttpInfo(hashViewModel);
             return localVarResponse.Data;
@@ -19259,7 +19259,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HashViewModel</returns>
-        public Tribufu.Client.ApiResponse<HashViewModel> HashMd5WithHttpInfo(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<HashViewModel> HashMd5WithHttpInfo(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -19318,7 +19318,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HashViewModel</returns>
-        public async System.Threading.Tasks.Task<HashViewModel> HashMd5Async(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<HashViewModel> HashMd5Async(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<HashViewModel> localVarResponse = await HashMd5WithHttpInfoAsync(hashViewModel, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -19332,7 +19332,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HashViewModel)</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<HashViewModel>> HashMd5WithHttpInfoAsync(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<HashViewModel>> HashMd5WithHttpInfoAsync(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -19391,7 +19391,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HashViewModel</returns>
-        public HashViewModel HashSha256(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0)
+        public HashViewModel HashSha256(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<HashViewModel> localVarResponse = HashSha256WithHttpInfo(hashViewModel);
             return localVarResponse.Data;
@@ -19404,7 +19404,7 @@ namespace Tribufu.Api
         /// <param name="hashViewModel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HashViewModel</returns>
-        public Tribufu.Client.ApiResponse<HashViewModel> HashSha256WithHttpInfo(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<HashViewModel> HashSha256WithHttpInfo(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -19463,7 +19463,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HashViewModel</returns>
-        public async System.Threading.Tasks.Task<HashViewModel> HashSha256Async(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<HashViewModel> HashSha256Async(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<HashViewModel> localVarResponse = await HashSha256WithHttpInfoAsync(hashViewModel, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -19477,7 +19477,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HashViewModel)</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<HashViewModel>> HashSha256WithHttpInfoAsync(HashViewModel? hashViewModel = default(HashViewModel?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<HashViewModel>> HashSha256WithHttpInfoAsync(HashViewModel hashViewModel = default(HashViewModel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -19536,7 +19536,7 @@ namespace Tribufu.Api
         /// <param name="introspectRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>IntrospectResponse</returns>
-        public IntrospectResponse IntrospectToken(IntrospectRequest? introspectRequest = default(IntrospectRequest?), int operationIndex = 0)
+        public IntrospectResponse IntrospectToken(IntrospectRequest introspectRequest = default(IntrospectRequest), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<IntrospectResponse> localVarResponse = IntrospectTokenWithHttpInfo(introspectRequest);
             return localVarResponse.Data;
@@ -19549,7 +19549,7 @@ namespace Tribufu.Api
         /// <param name="introspectRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of IntrospectResponse</returns>
-        public Tribufu.Client.ApiResponse<IntrospectResponse> IntrospectTokenWithHttpInfo(IntrospectRequest? introspectRequest = default(IntrospectRequest?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<IntrospectResponse> IntrospectTokenWithHttpInfo(IntrospectRequest introspectRequest = default(IntrospectRequest), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -19609,7 +19609,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of IntrospectResponse</returns>
-        public async System.Threading.Tasks.Task<IntrospectResponse> IntrospectTokenAsync(IntrospectRequest? introspectRequest = default(IntrospectRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<IntrospectResponse> IntrospectTokenAsync(IntrospectRequest introspectRequest = default(IntrospectRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<IntrospectResponse> localVarResponse = await IntrospectTokenWithHttpInfoAsync(introspectRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -19623,7 +19623,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (IntrospectResponse)</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<IntrospectResponse>> IntrospectTokenWithHttpInfoAsync(IntrospectRequest? introspectRequest = default(IntrospectRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<IntrospectResponse>> IntrospectTokenWithHttpInfoAsync(IntrospectRequest introspectRequest = default(IntrospectRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -19683,7 +19683,7 @@ namespace Tribufu.Api
         /// <param name="revokeRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void RevokeToken(RevokeRequest? revokeRequest = default(RevokeRequest?), int operationIndex = 0)
+        public void RevokeToken(RevokeRequest revokeRequest = default(RevokeRequest), int operationIndex = 0)
         {
             RevokeTokenWithHttpInfo(revokeRequest);
         }
@@ -19695,7 +19695,7 @@ namespace Tribufu.Api
         /// <param name="revokeRequest"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Tribufu.Client.ApiResponse<Object> RevokeTokenWithHttpInfo(RevokeRequest? revokeRequest = default(RevokeRequest?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> RevokeTokenWithHttpInfo(RevokeRequest revokeRequest = default(RevokeRequest), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -19754,7 +19754,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RevokeTokenAsync(RevokeRequest? revokeRequest = default(RevokeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task RevokeTokenAsync(RevokeRequest revokeRequest = default(RevokeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await RevokeTokenWithHttpInfoAsync(revokeRequest, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -19767,7 +19767,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> RevokeTokenWithHttpInfoAsync(RevokeRequest? revokeRequest = default(RevokeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> RevokeTokenWithHttpInfoAsync(RevokeRequest revokeRequest = default(RevokeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -19826,7 +19826,7 @@ namespace Tribufu.Api
         /// <param name="search"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;Object&gt;</returns>
-        public List<Object> Search(Search? search = default(Search?), int operationIndex = 0)
+        public List<Object> Search(Search search = default(Search), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<List<Object>> localVarResponse = SearchWithHttpInfo(search);
             return localVarResponse.Data;
@@ -19839,7 +19839,7 @@ namespace Tribufu.Api
         /// <param name="search"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
-        public Tribufu.Client.ApiResponse<List<Object>> SearchWithHttpInfo(Search? search = default(Search?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<List<Object>> SearchWithHttpInfo(Search search = default(Search), int operationIndex = 0)
         {
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
 
@@ -19898,7 +19898,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;Object&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Object>> SearchAsync(Search? search = default(Search?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<Object>> SearchAsync(Search search = default(Search), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<List<Object>> localVarResponse = await SearchWithHttpInfoAsync(search, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -19912,7 +19912,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<List<Object>>> SearchWithHttpInfoAsync(Search? search = default(Search?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<List<Object>>> SearchWithHttpInfoAsync(Search search = default(Search), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Tribufu.Client.RequestOptions localVarRequestOptions = new Tribufu.Client.RequestOptions();
@@ -19972,7 +19972,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void UpdateClient(string id, Object? body = default(Object?), int operationIndex = 0)
+        public void UpdateClient(string id, Object body = default(Object), int operationIndex = 0)
         {
             UpdateClientWithHttpInfo(id, body);
         }
@@ -19985,7 +19985,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Tribufu.Client.ApiResponse<Object> UpdateClientWithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> UpdateClientWithHttpInfo(string id, Object body = default(Object), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -20051,7 +20051,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateClientAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task UpdateClientAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await UpdateClientWithHttpInfoAsync(id, body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -20065,7 +20065,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> UpdateClientWithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> UpdateClientWithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -20131,7 +20131,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void UpdateGameServer(string id, Object? body = default(Object?), int operationIndex = 0)
+        public void UpdateGameServer(string id, Object body = default(Object), int operationIndex = 0)
         {
             UpdateGameServerWithHttpInfo(id, body);
         }
@@ -20144,7 +20144,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Tribufu.Client.ApiResponse<Object> UpdateGameServerWithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> UpdateGameServerWithHttpInfo(string id, Object body = default(Object), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -20210,7 +20210,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateGameServerAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task UpdateGameServerAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await UpdateGameServerWithHttpInfoAsync(id, body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -20224,7 +20224,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> UpdateGameServerWithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> UpdateGameServerWithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -20290,7 +20290,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void UpdateGameServerCluster(string id, Object? body = default(Object?), int operationIndex = 0)
+        public void UpdateGameServerCluster(string id, Object body = default(Object), int operationIndex = 0)
         {
             UpdateGameServerClusterWithHttpInfo(id, body);
         }
@@ -20303,7 +20303,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Tribufu.Client.ApiResponse<Object> UpdateGameServerClusterWithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> UpdateGameServerClusterWithHttpInfo(string id, Object body = default(Object), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -20369,7 +20369,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateGameServerClusterAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task UpdateGameServerClusterAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await UpdateGameServerClusterWithHttpInfoAsync(id, body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -20383,7 +20383,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> UpdateGameServerClusterWithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> UpdateGameServerClusterWithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -20450,7 +20450,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
         [Obsolete]
-        public void UpdateGameServerClusterV1(string id, Object? body = default(Object?), int operationIndex = 0)
+        public void UpdateGameServerClusterV1(string id, Object body = default(Object), int operationIndex = 0)
         {
             UpdateGameServerClusterV1WithHttpInfo(id, body);
         }
@@ -20464,7 +20464,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
-        public Tribufu.Client.ApiResponse<Object> UpdateGameServerClusterV1WithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> UpdateGameServerClusterV1WithHttpInfo(string id, Object body = default(Object), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -20531,7 +20531,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task UpdateGameServerClusterV1Async(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task UpdateGameServerClusterV1Async(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await UpdateGameServerClusterV1WithHttpInfoAsync(id, body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -20546,7 +20546,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> UpdateGameServerClusterV1WithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> UpdateGameServerClusterV1WithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -20613,7 +20613,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
         [Obsolete]
-        public void UpdateGameServerV1(string id, Object? body = default(Object?), int operationIndex = 0)
+        public void UpdateGameServerV1(string id, Object body = default(Object), int operationIndex = 0)
         {
             UpdateGameServerV1WithHttpInfo(id, body);
         }
@@ -20627,7 +20627,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         [Obsolete]
-        public Tribufu.Client.ApiResponse<Object> UpdateGameServerV1WithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> UpdateGameServerV1WithHttpInfo(string id, Object body = default(Object), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -20694,7 +20694,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task UpdateGameServerV1Async(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task UpdateGameServerV1Async(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await UpdateGameServerV1WithHttpInfoAsync(id, body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -20709,7 +20709,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> UpdateGameServerV1WithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> UpdateGameServerV1WithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -20775,7 +20775,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void UpdateGroup(string id, Object? body = default(Object?), int operationIndex = 0)
+        public void UpdateGroup(string id, Object body = default(Object), int operationIndex = 0)
         {
             UpdateGroupWithHttpInfo(id, body);
         }
@@ -20788,7 +20788,7 @@ namespace Tribufu.Api
         /// <param name="body"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Tribufu.Client.ApiResponse<Object> UpdateGroupWithHttpInfo(string id, Object? body = default(Object?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> UpdateGroupWithHttpInfo(string id, Object body = default(Object), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -20854,7 +20854,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateGroupAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task UpdateGroupAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await UpdateGroupWithHttpInfoAsync(id, body, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -20868,7 +20868,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> UpdateGroupWithHttpInfoAsync(string id, Object? body = default(Object?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> UpdateGroupWithHttpInfoAsync(string id, Object body = default(Object), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -20934,7 +20934,7 @@ namespace Tribufu.Api
         /// <param name="package"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void UpdatePackage(string id, Package? package = default(Package?), int operationIndex = 0)
+        public void UpdatePackage(string id, Package package = default(Package), int operationIndex = 0)
         {
             UpdatePackageWithHttpInfo(id, package);
         }
@@ -20947,7 +20947,7 @@ namespace Tribufu.Api
         /// <param name="package"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Tribufu.Client.ApiResponse<Object> UpdatePackageWithHttpInfo(string id, Package? package = default(Package?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Object> UpdatePackageWithHttpInfo(string id, Package package = default(Package), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -21013,7 +21013,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdatePackageAsync(string id, Package? package = default(Package?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task UpdatePackageAsync(string id, Package package = default(Package), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await UpdatePackageWithHttpInfoAsync(id, package, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -21027,7 +21027,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> UpdatePackageWithHttpInfoAsync(string id, Package? package = default(Package?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Object>> UpdatePackageWithHttpInfoAsync(string id, Package package = default(Package), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -21093,7 +21093,7 @@ namespace Tribufu.Api
         /// <param name="updateProfile"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Profile</returns>
-        public Profile UpdateUserProfile(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0)
+        public Profile UpdateUserProfile(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<Profile> localVarResponse = UpdateUserProfileWithHttpInfo(id, updateProfile);
             return localVarResponse.Data;
@@ -21107,7 +21107,7 @@ namespace Tribufu.Api
         /// <param name="updateProfile"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Profile</returns>
-        public Tribufu.Client.ApiResponse<Profile> UpdateUserProfileWithHttpInfo(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Profile> UpdateUserProfileWithHttpInfo(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -21174,7 +21174,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Profile</returns>
-        public async System.Threading.Tasks.Task<Profile> UpdateUserProfileAsync(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Profile> UpdateUserProfileAsync(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<Profile> localVarResponse = await UpdateUserProfileWithHttpInfoAsync(id, updateProfile, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -21189,7 +21189,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Profile)</returns>
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Profile>> UpdateUserProfileWithHttpInfoAsync(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Profile>> UpdateUserProfileWithHttpInfoAsync(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -21257,7 +21257,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Profile</returns>
         [Obsolete]
-        public Profile UpdateUserProfileV1(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0)
+        public Profile UpdateUserProfileV1(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0)
         {
             Tribufu.Client.ApiResponse<Profile> localVarResponse = UpdateUserProfileV1WithHttpInfo(id, updateProfile);
             return localVarResponse.Data;
@@ -21272,7 +21272,7 @@ namespace Tribufu.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Profile</returns>
         [Obsolete]
-        public Tribufu.Client.ApiResponse<Profile> UpdateUserProfileV1WithHttpInfo(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0)
+        public Tribufu.Client.ApiResponse<Profile> UpdateUserProfileV1WithHttpInfo(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -21340,7 +21340,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Profile</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<Profile> UpdateUserProfileV1Async(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Profile> UpdateUserProfileV1Async(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Tribufu.Client.ApiResponse<Profile> localVarResponse = await UpdateUserProfileV1WithHttpInfoAsync(id, updateProfile, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -21356,7 +21356,7 @@ namespace Tribufu.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Profile)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Profile>> UpdateUserProfileV1WithHttpInfoAsync(string id, UpdateProfile? updateProfile = default(UpdateProfile?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Tribufu.Client.ApiResponse<Profile>> UpdateUserProfileV1WithHttpInfoAsync(string id, UpdateProfile updateProfile = default(UpdateProfile), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)

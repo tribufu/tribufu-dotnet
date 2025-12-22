@@ -11,14 +11,18 @@ namespace Tribufu
     /// </remarks>
     public static class TribufuApiSingleton
     {
-        private static TribufuApi? _instance = null;
+        private static TribufuApi _instance = null;
 
         /// <summary>
         /// Get the singleton instance of <see cref="TribufuApi"/>.
         /// </summary>
         public static TribufuApi GetInstance()
         {
-            _instance ??= TribufuApi.FromEnvOrDefault();
+            if (_instance == null)
+            {
+                _instance = TribufuApi.FromEnvOrDefault();
+            }
+
             return _instance;
         }
 
