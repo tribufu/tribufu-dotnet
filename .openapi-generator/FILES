@@ -26,7 +26,6 @@ src/Tribufu/Model/CodeChallengeMethod.cs
 src/Tribufu/Model/CodeResponse.cs
 src/Tribufu/Model/CreateUser.cs
 src/Tribufu/Model/CryptoViewModel.cs
-src/Tribufu/Model/File.cs
 src/Tribufu/Model/Game.cs
 src/Tribufu/Model/GameServer.cs
 src/Tribufu/Model/GameServerCluster.cs
@@ -34,7 +33,7 @@ src/Tribufu/Model/GameServerQuery.cs
 src/Tribufu/Model/GameServerStatus.cs
 src/Tribufu/Model/GrantType.cs
 src/Tribufu/Model/Group.cs
-src/Tribufu/Model/GroupGame.cs
+src/Tribufu/Model/GroupApplication.cs
 src/Tribufu/Model/GroupMember.cs
 src/Tribufu/Model/GroupRank.cs
 src/Tribufu/Model/HashViewModel.cs
@@ -47,6 +46,9 @@ src/Tribufu/Model/LoginProvider.cs
 src/Tribufu/Model/ModelClient.cs
 src/Tribufu/Model/Package.cs
 src/Tribufu/Model/PackageRelease.cs
+src/Tribufu/Model/Product.cs
+src/Tribufu/Model/ProductPrice.cs
+src/Tribufu/Model/ProductType.cs
 src/Tribufu/Model/Profile.cs
 src/Tribufu/Model/ProfileGame.cs
 src/Tribufu/Model/ProfileGroup.cs
@@ -55,8 +57,7 @@ src/Tribufu/Model/RevokeRequest.cs
 src/Tribufu/Model/Search.cs
 src/Tribufu/Model/SearchType.cs
 src/Tribufu/Model/ServerMetrics.cs
-src/Tribufu/Model/Subscription.cs
-src/Tribufu/Model/SubscriptionPrice.cs
+src/Tribufu/Model/StorageFile.cs
 src/Tribufu/Model/TokenHintType.cs
 src/Tribufu/Model/TokenRequest.cs
 src/Tribufu/Model/TokenResponse.cs

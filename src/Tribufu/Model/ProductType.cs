@@ -27,34 +27,22 @@ using OpenAPIDateConverter = Tribufu.Client.OpenAPIDateConverter;
 namespace Tribufu.Model
 {
     /// <summary>
-    /// Defines GrantType
+    /// Defines ProductType
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum GrantType
+    public enum ProductType
     {
         /// <summary>
-        /// Enum AuthorizationCode for value: authorization_code
+        /// Enum Product for value: product
         /// </summary>
-        [EnumMember(Value = "authorization_code")]
-        AuthorizationCode,
+        [EnumMember(Value = "product")]
+        Product,
 
         /// <summary>
-        /// Enum ClientCredentials for value: client_credentials
+        /// Enum Subscription for value: subscription
         /// </summary>
-        [EnumMember(Value = "client_credentials")]
-        ClientCredentials,
-
-        /// <summary>
-        /// Enum Password for value: password
-        /// </summary>
-        [EnumMember(Value = "password")]
-        Password,
-
-        /// <summary>
-        /// Enum RefreshToken for value: refresh_token
-        /// </summary>
-        [EnumMember(Value = "refresh_token")]
-        RefreshToken
+        [EnumMember(Value = "subscription")]
+        Subscription
     }
 
 }
