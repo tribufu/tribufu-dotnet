@@ -4,23 +4,25 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Tribufu.EntityFrameworkCore.Repositories
+namespace Tribufu.EntityFrameworkCore
 {
     public interface IRepository<T, K> where T : class
     {
+        void Seed();
+
         Task SeedAsync();
 
-        IList<T> GetAll();
+        IList<T> List();
 
-        Task<IList<T>> GetAllAsync();
+        Task<IList<T>> ListAsync();
 
-        IList<T> GetPage(uint page, uint limit);
+        IList<T> List(uint page, uint limit);
 
-        Task<IList<T>> GetPageAsync(uint page, uint limit);
+        Task<IList<T>> ListAsync(uint page, uint limit);
 
-        T? GetOne(K key);
+        T? Find(K key);
 
-        Task<T?> GetOneAsync(K key);
+        Task<T?> FindAsync(K key);
 
         T? Create(T entity);
 
