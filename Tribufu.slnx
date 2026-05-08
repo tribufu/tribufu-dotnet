@@ -1,0 +1,13 @@
+<Solution>
+    <Folder Name="/src/">
+        <Project Path="src/Tribufu.AspNetCore/Tribufu.AspNetCore.csproj" />
+        <Project Path="src/Tribufu.ComponentModel/Tribufu.ComponentModel.csproj" />
+        <Project Path="src/Tribufu.Configuration/Tribufu.Configuration.csproj" />
+        <Project Path="src/Tribufu.EntityFrameworkCore/Tribufu.EntityFrameworkCore.csproj" />
+        <Project Path="src/Tribufu.Example/Tribufu.Example.csproj" />
+        <Project Path="src/Tribufu.Logging/Tribufu.Logging.csproj" />
+        <Project Path="src/Tribufu.Platform/Tribufu.Platform.csproj" />
+        <Project Path="src/Tribufu.Serialization/Tribufu.Serialization.csproj" />
+        <Project Path="src/Tribufu/Tribufu.csproj" />
+    </Folder>
+</Solution>
