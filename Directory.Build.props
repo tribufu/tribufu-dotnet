@@ -10,4 +10,10 @@
         <AssemblyVersion>$(Version).0</AssemblyVersion>
         <NoWarn>$(NoWarn);0618;1591;1998;2002;8767</NoWarn>
     </PropertyGroup>
+    <PropertyGroup>
+        <ConfigLower>$([System.String]::Copy('$(Configuration)').ToLower())</ConfigLower>
+        <IntermediateOutputPath>$(SolutionDir)intermediate\build\$(MSBuildProjectName)\$(ConfigLower)\</IntermediateOutputPath>
+        <MSBuildProjectExtensionsPath>$(SolutionDir)intermediate\build\$(MSBuildProjectName)\</MSBuildProjectExtensionsPath>
+        <OutputPath>$(SolutionDir)bin\$(ConfigLower)\</OutputPath>
+    </PropertyGroup>
 </Project>
