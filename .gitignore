@@ -1,5 +1,6 @@
 .vs/
 bin/
+intermediate/
 obj/
 releases/*
 
@@ -8,4 +9,5 @@ releases/*
 .env
 *.filters
 *.user
+*.lscache
 desktop.ini
