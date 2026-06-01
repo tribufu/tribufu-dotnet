@@ -12,8 +12,8 @@
     </PropertyGroup>
     <PropertyGroup>
         <ConfigLower>$([System.String]::Copy('$(Configuration)').ToLower())</ConfigLower>
-        <IntermediateOutputPath>$(SolutionDir)intermediate\build\$(MSBuildProjectName)\$(ConfigLower)\</IntermediateOutputPath>
-        <MSBuildProjectExtensionsPath>$(SolutionDir)intermediate\build\$(MSBuildProjectName)\</MSBuildProjectExtensionsPath>
+        <targetOutputPath>$(SolutionDir)target\$(MSBuildProjectName)\$(ConfigLower)\</targetOutputPath>
+        <MSBuildProjectExtensionsPath>$(SolutionDir)target\$(MSBuildProjectName)\</MSBuildProjectExtensionsPath>
         <OutputPath>$(SolutionDir)bin\$(ConfigLower)\</OutputPath>
     </PropertyGroup>
 </Project>

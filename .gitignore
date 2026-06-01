@@ -1,8 +1,8 @@
 .vs/
 bin/
-intermediate/
 obj/
 releases/*
+target/
 
 !releases/.gitkeep
 .DS_Store
