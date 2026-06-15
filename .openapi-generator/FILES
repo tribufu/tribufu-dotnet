@@ -16,7 +16,6 @@ src/Tribufu/Client/OpenAPIDateConverter.cs
 src/Tribufu/Client/RequestOptions.cs
 src/Tribufu/Client/RetryConfiguration.cs
 src/Tribufu/Model/AbstractOpenAPISchema.cs
-src/Tribufu/Model/Account.cs
 src/Tribufu/Model/Application.cs
 src/Tribufu/Model/ApplicationType.cs
 src/Tribufu/Model/AuthorizeRequest.cs
@@ -26,6 +25,7 @@ src/Tribufu/Model/CodeChallengeMethod.cs
 src/Tribufu/Model/CodeResponse.cs
 src/Tribufu/Model/CreateUser.cs
 src/Tribufu/Model/CryptoViewModel.cs
+src/Tribufu/Model/ExternalAccount.cs
 src/Tribufu/Model/Game.cs
 src/Tribufu/Model/GameServer.cs
 src/Tribufu/Model/GameServerCluster.cs
@@ -37,12 +37,12 @@ src/Tribufu/Model/GroupApplication.cs
 src/Tribufu/Model/GroupMember.cs
 src/Tribufu/Model/GroupRank.cs
 src/Tribufu/Model/HashViewModel.cs
+src/Tribufu/Model/IdentityProviderType.cs
 src/Tribufu/Model/IntrospectRequest.cs
 src/Tribufu/Model/IntrospectResponse.cs
 src/Tribufu/Model/IpAddress.cs
 src/Tribufu/Model/LeaderboardItem.cs
 src/Tribufu/Model/LeaderboardOrder.cs
-src/Tribufu/Model/LoginProvider.cs
 src/Tribufu/Model/ModelClient.cs
 src/Tribufu/Model/Package.cs
 src/Tribufu/Model/PackageRelease.cs

@@ -27,34 +27,52 @@ using OpenAPIDateConverter = Tribufu.Client.OpenAPIDateConverter;
 namespace Tribufu.Model
 {
     /// <summary>
-    /// Defines SearchType
+    /// Defines IdentityProviderType
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum SearchType
+    public enum IdentityProviderType
     {
         /// <summary>
-        /// Enum User for value: user
+        /// Enum Steam for value: steam
         /// </summary>
-        [EnumMember(Value = "user")]
-        User,
+        [EnumMember(Value = "steam")]
+        Steam,
 
         /// <summary>
-        /// Enum Group for value: group
+        /// Enum Epic for value: epic
         /// </summary>
-        [EnumMember(Value = "group")]
-        Group,
+        [EnumMember(Value = "epic")]
+        Epic,
 
         /// <summary>
-        /// Enum GameServer for value: game_server
+        /// Enum Discord for value: discord
         /// </summary>
-        [EnumMember(Value = "game_server")]
-        GameServer,
+        [EnumMember(Value = "discord")]
+        Discord,
 
         /// <summary>
-        /// Enum GameServerCluster for value: game_server_cluster
+        /// Enum Microsoft for value: microsoft
         /// </summary>
-        [EnumMember(Value = "game_server_cluster")]
-        GameServerCluster
+        [EnumMember(Value = "microsoft")]
+        Microsoft,
+
+        /// <summary>
+        /// Enum Playstation for value: playstation
+        /// </summary>
+        [EnumMember(Value = "playstation")]
+        Playstation,
+
+        /// <summary>
+        /// Enum Google for value: google
+        /// </summary>
+        [EnumMember(Value = "google")]
+        Google,
+
+        /// <summary>
+        /// Enum Apple for value: apple
+        /// </summary>
+        [EnumMember(Value = "apple")]
+        Apple
     }
 
 }
