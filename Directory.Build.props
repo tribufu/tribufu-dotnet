@@ -15,5 +15,6 @@
         <IntermediateOutputPath>$(SolutionDir)intermediate\$(MSBuildProjectName)\$(ConfigLower)\</IntermediateOutputPath>
         <MSBuildProjectExtensionsPath>$(SolutionDir)intermediate\$(MSBuildProjectName)\</MSBuildProjectExtensionsPath>
         <OutputPath>$(SolutionDir)bin\$(ConfigLower)\</OutputPath>
+        <PackageOutputPath>$(SolutionDir)intermediate\</PackageOutputPath>
     </PropertyGroup>
 </Project>
