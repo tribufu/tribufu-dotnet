@@ -1,10 +1,9 @@
 .vs/
 bin/
-intermediate/
+Binaries
+Intermediate/
 obj/
-releases/*
 
-!releases/.gitkeep
 .DS_Store
 .env
 *.filters

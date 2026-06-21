@@ -11,10 +11,9 @@
         <NoWarn>$(NoWarn);0618;1591;1998;2002;8767</NoWarn>
     </PropertyGroup>
     <PropertyGroup>
-        <ConfigLower>$([System.String]::Copy('$(Configuration)').ToLower())</ConfigLower>
-        <IntermediateOutputPath>$(SolutionDir)intermediate\$(MSBuildProjectName)\$(ConfigLower)\</IntermediateOutputPath>
-        <MSBuildProjectExtensionsPath>$(SolutionDir)intermediate\$(MSBuildProjectName)\</MSBuildProjectExtensionsPath>
-        <OutputPath>$(SolutionDir)bin\$(ConfigLower)\</OutputPath>
-        <PackageOutputPath>$(SolutionDir)intermediate\</PackageOutputPath>
+        <IntermediateOutputPath>$(SolutionDir)Intermediate\DotNet\$(MSBuildProjectName)\$(Configuration)\</IntermediateOutputPath>
+        <MSBuildProjectExtensionsPath>$(SolutionDir)Intermediate\DotNet\$(MSBuildProjectName)\</MSBuildProjectExtensionsPath>
+        <OutputPath>$(SolutionDir)Binaries\$(Configuration)\DotNet\</OutputPath>
+        <PackageOutputPath>$(SolutionDir)Intermediate\</PackageOutputPath>
     </PropertyGroup>
 </Project>
