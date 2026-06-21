@@ -11,8 +11,10 @@
         <NoWarn>$(NoWarn);0618;1591;1998;2002;8767</NoWarn>
     </PropertyGroup>
     <PropertyGroup>
-        <IntermediateOutputPath>$(SolutionDir)Intermediate\DotNet\$(MSBuildProjectName)\$(Configuration)\</IntermediateOutputPath>
-        <MSBuildProjectExtensionsPath>$(SolutionDir)Intermediate\DotNet\$(MSBuildProjectName)\</MSBuildProjectExtensionsPath>
+        <BaseIntermediateOutputPath>$(SolutionDir)Intermediate\DotNet\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+        <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\</IntermediateOutputPath>
+        <MSBuildProjectExtensionsPath>$(BaseIntermediateOutputPath)</MSBuildProjectExtensionsPath>
+        <NuspecOutputPath>$(IntermediateOutputPath)</NuspecOutputPath>
         <OutputPath>$(SolutionDir)Binaries\$(Configuration)\DotNet\</OutputPath>
         <PackageOutputPath>$(SolutionDir)Intermediate\</PackageOutputPath>
     </PropertyGroup>
