@@ -1,7 +1,7 @@
 .vs/
+artifacts/
 bin/
 obj/
-publish/
 
 .DS_Store
 .env
