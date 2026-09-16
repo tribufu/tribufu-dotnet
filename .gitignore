@@ -1,10 +1,7 @@
-.agents/
-.codex/
 .vs/
 bin/
-Binaries
-Intermediate/
 obj/
+publish/
 
 .DS_Store
 .env
