@@ -20,20 +20,28 @@ namespace Tribufu.EntityFrameworkCore
 
         Task<IList<T>> ListAsync(uint page, uint limit);
 
-        T? Find(K key);
+        bool Exists(K key);
 
-        Task<T?> FindAsync(K key);
+        Task<bool> ExistsAsync(K key);
 
-        T? Create(T entity);
+        /// <exception cref="EntityNotFoundException">No entity has the key.</exception>
+        T Find(K key);
 
-        Task<T?> CreateAsync(T entity);
+        /// <exception cref="EntityNotFoundException">No entity has the key.</exception>
+        Task<T> FindAsync(K key);
 
-        T? Update(T entity);
+        T Create(T entity);
 
-        Task<T?> UpdateAsync(T entity);
+        Task<T> CreateAsync(T entity);
 
+        T Update(T entity);
+
+        Task<T> UpdateAsync(T entity);
+
+        /// <exception cref="EntityNotFoundException">No entity has the key.</exception>
         void Delete(K key);
 
+        /// <exception cref="EntityNotFoundException">No entity has the key.</exception>
         Task DeleteAsync(K key);
 
         void Delete(T entity);

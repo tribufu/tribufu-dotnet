@@ -41,68 +41,70 @@ namespace Tribufu.EntityFrameworkCore
 
         public virtual IList<T> List(uint page, uint limit)
         {
-            return _dbSet.Skip((int)((page < 1 ? 0 : page - 1) * limit)).Take((int)limit).ToList();
+            return Paginate(_dbSet, page, limit).ToList();
         }
 
         public virtual async Task<IList<T>> ListAsync(uint page, uint limit)
         {
-            return await _dbSet.Skip((int)((page < 1 ? 0 : page - 1) * limit)).Take((int)limit).ToListAsync();
+            return await Paginate(_dbSet, page, limit).ToListAsync();
         }
 
-        public virtual T? Find(K key)
+        public virtual bool Exists(K key)
         {
-            return _dbSet.Find(key);
+            return _dbSet.Find(key) != null;
         }
 
-        public virtual async Task<T?> FindAsync(K key)
+        public virtual async Task<bool> ExistsAsync(K key)
         {
-            return await _dbSet.FindAsync(key);
+            return await _dbSet.FindAsync(key) != null;
         }
 
-        public virtual T? Create(T entity)
+        public virtual T Find(K key)
+        {
+            return _dbSet.Find(key) ?? throw EntityNotFoundException.For<T>(key);
+        }
+
+        public virtual async Task<T> FindAsync(K key)
+        {
+            return await _dbSet.FindAsync(key) ?? throw EntityNotFoundException.For<T>(key);
+        }
+
+        public virtual T Create(T entity)
         {
             _dbSet.Add(entity);
-            var result = _dbContext.SaveChanges();
-            return result > 0 ? entity : null;
+            _dbContext.SaveChanges();
+            return entity;
         }
 
-        public virtual async Task<T?> CreateAsync(T entity)
+        public virtual async Task<T> CreateAsync(T entity)
         {
             await _dbSet.AddAsync(entity);
-            var result = await _dbContext.SaveChangesAsync();
-            return result > 0 ? entity : null;
+            await _dbContext.SaveChangesAsync();
+            return entity;
         }
 
-        public virtual T? Update(T entity)
+        public virtual T Update(T entity)
         {
             _dbSet.Update(entity);
-            var result = _dbContext.SaveChanges();
-            return result > 0 ? entity : null;
+            _dbContext.SaveChanges();
+            return entity;
         }
 
-        public virtual async Task<T?> UpdateAsync(T entity)
+        public virtual async Task<T> UpdateAsync(T entity)
         {
             _dbSet.Update(entity);
-            var result = await _dbContext.SaveChangesAsync();
-            return result > 0 ? entity : null;
+            await _dbContext.SaveChangesAsync();
+            return entity;
         }
 
         public virtual void Delete(K key)
         {
-            var entity = _dbSet.Find(key);
-            if (entity != null)
-            {
-                Delete(entity);
-            }
+            Delete(Find(key));
         }
 
         public virtual async Task DeleteAsync(K key)
         {
-            var entity = await _dbSet.FindAsync(key);
-            if (entity != null)
-            {
-                await DeleteAsync(entity);
-            }
+            await DeleteAsync(await FindAsync(key));
         }
 
         public virtual void Delete(T entity)
@@ -115,6 +117,14 @@ namespace Tribufu.EntityFrameworkCore
         {
             _dbSet.Remove(entity);
             await _dbContext.SaveChangesAsync();
+        }
+
+        /// <summary>
+        /// Skip to a one-based page. A page of zero is read as the first page.
+        /// </summary>
+        protected static IQueryable<E> Paginate<E>(IQueryable<E> query, uint page, uint limit)
+        {
+            return query.Skip((int)((page < 1 ? 0 : page - 1) * limit)).Take((int)limit);
         }
     }
 }
